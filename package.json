@@ -11,7 +11,7 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "@revolist/rv-pro-trial": "^1.5.25",
+    "@revolist/rv-pro-trial": "^1.5.27",
     "typescript": "~5.8.3",
     "vite": "^6.3.5"
   }
