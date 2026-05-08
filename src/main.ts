@@ -1,11 +1,13 @@
 import { defineCustomElements } from '@revolist/revogrid/loader';
 defineCustomElements();
-import '@revolist/rv-pro-trial/dist/revogrid-pro.css';
+import '@revolist/rv-pro-trial/dist/rv-pro-trial.css';
+import '@revolist/rv-enterprise-trial/dist/rv-enterprise-trial.css';
+
 import {
   PivotPlugin,
   type PivotConfig,
-  commonAggregators,
-} from '@revolist/rv-pro-trial';
+} from '@revolist/rv-enterprise-trial';
+import { commonAggregators } from '@revolist/rv-pro-trial';
 
 const grid = document.createElement('revo-grid');
 grid.hideAttribution = true;
