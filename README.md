@@ -32,45 +32,33 @@ yarn install
 
 ## Getting Started
 
-1. Import the required dependencies in your main.ts:
-```typescript
-import '@revolist/rv-pro-trial/dist/revogrid-pro.css';
-import { PivotPlugin, type PivotConfig, commonAggregators } from '@revolist/rv-pro-trial';
+1. Install dependencies:
+```bash
+npm install
 ```
 
-2. Initialize the grid component (based on your framework or VanillaJS)
-
-3. Configure the grid with your data and settings:
-```typescript
-grid.theme = 'compact';
-grid.source = [
-  { name: 'John Doe', age: 25, dateOfBirth: '1998-01-15' },
-  // Add your data here
-];
+2. Run the examples:
+```bash
+npm run dev
 ```
 
-4. Add plugins and additional features:
-```typescript
-grid.plugins = [PivotPlugin];
-// Configure pivot if needed
-const pivot: PivotConfig = {
-  dimensions: [
-    { prop: 'age' },
-    { name: 'Date of Birth', prop: 'dateOfBirth' }
-  ],
-  rows: ['age'],
-  values: [
-    { prop: 'dateOfBirth', aggregator: 'count' }
-  ],
-  hasConfigurator: true
-};
-grid.additionalData = { pivot };
-```
+3. Open the local Vite URL and use the top switch:
+- `Tree` starts with the simplest hierarchy example.
+- `Pivot` shows grouped analytical totals.
+- `Gantt` shows the full project timeline example.
 
-5. Mount the grid to your application:
-```typescript
-document.getElementById('app')?.appendChild(grid);
-```
+## Example Map
+
+- `src/main.ts` - App shell, top switch, URL hash, and cleanup.
+- `src/shared/grid.ts` - Reusable grid defaults and column types.
+- `src/shared/ui.ts` - Small DOM helpers for panels, buttons, and toggles.
+- `src/examples/tree.ts` - Tree grid setup.
+- `src/examples/tree.data.ts` - Tree rows.
+- `src/examples/pivot.ts` - Pivot grid setup.
+- `src/examples/pivot.config.ts` - Pivot dimensions, rows, columns, values, and totals.
+- `src/examples/pivot.data.ts` - Pivot rows.
+- `src/examples/gantt.ts` - Gantt grid and toolbar setup.
+- `src/examples/gantt.data.ts` - Gantt project, tasks, dependencies, calendars, resources, and assignments.
 
 ## Available Scripts
 
