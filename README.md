@@ -6,7 +6,7 @@ The app ships with three professional examples behind one top-level switch:
 
 | Example | What it shows | Good first file |
 | --- | --- | --- |
-| Tree | Hierarchical rows, row selection, row ordering, advanced filters, and a Pro dropdown status column with badge styling | `src/examples/tree.ts` |
+| Tree | Hierarchical rows, row selection, row ordering, advanced filters, and Pro dropdown owner/status columns with polished styling | `src/examples/tree.ts` |
 | Pivot | Client-side pivot dimensions, rows, columns, values, subtotals, grand totals, and row grouping | `src/examples/pivot.config.ts` |
 | Gantt | Task hierarchy, dependencies, progress, timeline toolbar, resizing, and tooltips | `src/examples/gantt.ts` |
 
@@ -46,7 +46,7 @@ src/
     types.ts                  Shared example contracts
   examples/
     index.ts                  Example registry used by the top switch
-    tree.ts                   Tree grid setup and Pro status dropdown
+    tree.ts                   Tree grid setup and Pro owner/status dropdowns
     tree.data.ts              Tree row data
     pivot.ts                  Pivot grid setup and row-grouping toggle
     pivot.config.ts           Pivot dimensions, rows, columns, values, totals
@@ -75,8 +75,8 @@ Professional touches included:
 - Expand and collapse toolbar actions.
 - Row selection and row ordering.
 - Advanced selection filters.
-- Editable Pro `ColumnDropdown` status field.
-- Status badges rendered consistently in the cell and dropdown menu.
+- Editable Pro `ColumnDropdown` owner and status fields.
+- User chips and status badges rendered consistently in cells and dropdown menus.
 
 ### Pivot
 
@@ -103,7 +103,7 @@ The e2e suite is intentionally simple and beginner-friendly:
 npm run test:e2e
 ```
 
-It starts the Vite app, opens each example, checks the top switch, verifies grids render, and confirms the Tree status dropdown displays badge-styled options.
+It starts the Vite app, opens each example, checks the top switch, verifies grids render, and confirms the Tree owner/status dropdowns display styled menu options.
 
 ## Customization Guide
 

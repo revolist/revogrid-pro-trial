@@ -23,6 +23,42 @@ import type { MountCleanup } from '../shared/types';
 import { createTreeRows } from './tree.data';
 
 type TreeStatus = 'Planned' | 'Active' | 'Review' | 'Blocked';
+type TreeOwner =
+  | 'Maya Chen'
+  | 'Noah Smith'
+  | 'Eva Green'
+  | 'Liam Brown'
+  | 'Olivia Lee'
+  | 'Mia Wilson'
+  | 'Ethan Davis'
+  | 'Ava Martin'
+  | 'James Clark'
+  | 'Sofia Hall';
+
+type OwnerOption = DropdownOption<TreeOwner> & {
+  initials: string;
+  role: string;
+  tone: string;
+};
+
+/**
+ * Dropdown choices for the editable Owner column.
+ *
+ * The extra display metadata is optional, but it makes the example useful for
+ * product screens where users need to recognize a person quickly.
+ */
+const ownerOptions: OwnerOption[] = [
+  { value: 'Maya Chen', label: 'Maya Chen', initials: 'MC', role: 'Product Lead', tone: 'blue' },
+  { value: 'Noah Smith', label: 'Noah Smith', initials: 'NS', role: 'API Engineer', tone: 'green' },
+  { value: 'Eva Green', label: 'Eva Green', initials: 'EG', role: 'Grid Engineer', tone: 'violet' },
+  { value: 'Liam Brown', label: 'Liam Brown', initials: 'LB', role: 'QA Lead', tone: 'amber' },
+  { value: 'Olivia Lee', label: 'Olivia Lee', initials: 'OL', role: 'Analytics Lead', tone: 'rose' },
+  { value: 'Mia Wilson', label: 'Mia Wilson', initials: 'MW', role: 'Data Analyst', tone: 'blue' },
+  { value: 'Ethan Davis', label: 'Ethan Davis', initials: 'ED', role: 'Export Owner', tone: 'green' },
+  { value: 'Ava Martin', label: 'Ava Martin', initials: 'AM', role: 'Operations', tone: 'violet' },
+  { value: 'James Clark', label: 'James Clark', initials: 'JC', role: 'Enablement', tone: 'amber' },
+  { value: 'Sofia Hall', label: 'Sofia Hall', initials: 'SH', role: 'Runbook Owner', tone: 'rose' },
+];
 
 /**
  * Dropdown choices for the editable Status column.
@@ -83,8 +119,8 @@ export function mountTreeExample(parent: HTMLElement, title: string, description
 /**
  * Build the Tree grid columns.
  *
- * The Status column uses the Pro `ColumnDropdown` type and custom renderers so
- * both the selected value and dropdown options show the same badge styling.
+ * Owner and Status use the Pro `ColumnDropdown` type with custom renderers so
+ * selected cells and dropdown options share the same production styling.
  */
 function createTreeColumns(): ColumnRegular[] {
   return [
@@ -106,7 +142,26 @@ function createTreeColumns(): ColumnRegular[] {
     {
       name: 'Owner',
       prop: 'owner',
-      size: 160,
+      size: 210,
+      columnType: 'dropdown',
+      dropdown: {
+        source: ownerOptions,
+        placeholder: 'Select owner',
+        config: {
+          ariaLabel: 'Owner',
+          popupClassName: 'owner-dropdown-menu',
+        },
+        renderSelectedValue: (h, selectedOptions, children) => {
+          const selected = selectedOptions[0] as OwnerOption | undefined;
+          return h('div', { class: 'owner-dropdown-value' }, [
+            selected ? renderOwnerChip(h, selected, 'compact') : h('span', { class: 'owner-placeholder' }, 'Select owner'),
+            children,
+          ]);
+        },
+        renderOption: (h, option) => {
+          return h('div', { class: 'owner-dropdown-option' }, renderOwnerChip(h, option as OwnerOption, 'menu'));
+        },
+      },
       sortable: true,
       filter: ['selection'],
     },
@@ -145,11 +200,31 @@ function createTreeColumns(): ColumnRegular[] {
   ];
 }
 
-type BadgeRenderFunction = (tag: string, props: Record<string, unknown>, children?: unknown) => unknown;
+type CellRenderFunction = (tag: string, props: Record<string, unknown>, children?: unknown) => unknown;
+
+/**
+ * Render a user chip for the Owner cell or dropdown option.
+ *
+ * @param h - RevoGrid render helper passed by the dropdown column type.
+ * @param option - Selected or candidate owner option.
+ * @param mode - Compact cells hide the role; menu options include it.
+ */
+function renderOwnerChip(h: CellRenderFunction, option: OwnerOption, mode: 'compact' | 'menu') {
+  return h('span', { class: `owner-chip owner-chip--${option.tone}` }, [
+    h('span', { class: 'owner-avatar' }, option.initials),
+    h('span', { class: 'owner-copy' }, [
+      h('span', { class: 'owner-name' }, option.label),
+      mode === 'menu' ? h('span', { class: 'owner-role' }, option.role) : null,
+    ]),
+  ]);
+}
 
 /**
  * Render a status badge for a cell or dropdown option.
+ *
+ * @param h - RevoGrid render helper passed by the dropdown column type.
+ * @param option - Selected or candidate status option.
  */
-function renderStatusBadge(h: BadgeRenderFunction, option: (typeof statusOptions)[number]) {
+function renderStatusBadge(h: CellRenderFunction, option: (typeof statusOptions)[number]) {
   return h('span', { class: `status-badge status-badge--${option.tone}` }, option.label);
 }

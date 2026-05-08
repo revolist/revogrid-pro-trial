@@ -329,6 +329,110 @@ revo-grid {
   margin: 0;
 }
 
+/* Owner chips shared by Tree cells and the Pro dropdown menu */
+.owner-dropdown-value {
+  display: flex;
+  min-width: 0;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 0 8px;
+}
+
+.owner-dropdown-option {
+  display: flex;
+  align-items: center;
+  padding: 6px 8px;
+}
+
+.owner-placeholder {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.owner-chip {
+  display: inline-flex;
+  min-width: 0;
+  max-width: 100%;
+  align-items: center;
+  gap: 8px;
+  color: var(--foreground);
+  line-height: 1.2;
+}
+
+.owner-avatar {
+  display: inline-flex;
+  width: 26px;
+  height: 26px;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.owner-copy {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.owner-name,
+.owner-role {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.owner-name {
+  font-size: 13px;
+  font-weight: 650;
+}
+
+.owner-role {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.owner-chip--blue .owner-avatar {
+  border-color: #bfdbfe;
+  background: #dbeafe;
+  color: #1e40af;
+}
+
+.owner-chip--green .owner-avatar {
+  border-color: #bbf7d0;
+  background: #dcfce7;
+  color: #166534;
+}
+
+.owner-chip--violet .owner-avatar {
+  border-color: #ddd6fe;
+  background: #ede9fe;
+  color: #5b21b6;
+}
+
+.owner-chip--amber .owner-avatar {
+  border-color: #fde68a;
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.owner-chip--rose .owner-avatar {
+  border-color: #fecdd3;
+  background: #ffe4e6;
+  color: #9f1239;
+}
+
+.revo-dropdown-menu.owner-dropdown-menu .owner-dropdown-option {
+  margin: 0;
+}
+
 /* Responsive layout */
 @media (max-width: 760px) {
   .app-shell {

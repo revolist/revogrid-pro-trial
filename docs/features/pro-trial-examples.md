@@ -4,7 +4,7 @@
 
 **Non-goals:** Do not add a framework, routing library, Tailwind, or a full shadcn install to this minimal TypeScript trial.
 
-**Expected behavior:** A header switch at the top changes between examples without a page reload. Each example mounts a RevoGrid instance with trial plugins and local sample data. The source is decomposed so a first-time user can open one example file and understand that example without reading the full app. The Tree status column uses the Pro dropdown column type and renders the same badge styling in cells and dropdown options.
+**Expected behavior:** A header switch at the top changes between examples without a page reload. Each example mounts a RevoGrid instance with trial plugins and local sample data. The source is decomposed so a first-time user can open one example file and understand that example without reading the full app. The Tree owner and status columns use the Pro dropdown column type and render the same user chip or badge styling in cells and dropdown options.
 
 **API/config/data model:** Uses the existing `@revolist/rv-pro-trial` and `@revolist/rv-enterprise-trial` exports. Shared RevoGrid defaults live in `src/shared/grid.ts`; each example owns its data/config in `src/examples/*`.
 
@@ -16,4 +16,4 @@
 
 **Tests:**
 - Unit: Not applicable; this is example composition around packaged plugin APIs.
-- E2E: `npm run test:e2e` starts the Vite trial app and verifies the Tree, Pivot, and Gantt examples render through the header switch.
+- E2E: `npm run test:e2e` starts the Vite trial app, verifies the Tree owner/status dropdown menus, and checks the Pivot and Gantt examples render through the header switch.

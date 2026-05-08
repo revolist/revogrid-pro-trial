@@ -2,8 +2,8 @@
  * End-to-end smoke tests for the RevoGrid Pro Trial examples.
  *
  * These tests intentionally stay simple: they verify that first-time users can
- * open each top-level example and that the Tree status dropdown shows the same
- * badge styling in its menu as it does in cells.
+ * open each top-level example and that the Tree dropdowns show the same styled
+ * content in menus as they do in cells.
  */
 import { expect, test } from '@playwright/test';
 
@@ -16,8 +16,17 @@ test.describe('RevoGrid Pro trial examples', () => {
     await expect(page.getByRole('tab', { name: 'Tree' })).toHaveAttribute('aria-selected', 'true');
     await expect(page.getByRole('button', { name: 'Expand all' })).toBeVisible();
     await expect(page.getByRole('button', { name: 'Collapse all' })).toBeVisible();
+    await expect(page.locator('.owner-chip').first()).toBeVisible();
     await expect(page.locator('.status-badge--active').first()).toBeVisible();
     await expect(page.locator('revo-grid')).toBeVisible();
+  });
+
+  test('shows user chips inside the Tree owner dropdown', async ({ page }) => {
+    await page.goto('/#tree');
+    await page.locator('.owner-chip').first().click();
+
+    await expect(page.locator('.revo-dropdown-menu .owner-chip').filter({ hasText: 'Maya Chen' })).toBeVisible();
+    await expect(page.locator('.revo-dropdown-menu .owner-role').filter({ hasText: 'Product Lead' })).toBeVisible();
   });
 
   test('shows badge styling inside the Tree status dropdown', async ({ page }) => {
