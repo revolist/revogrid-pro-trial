@@ -5,15 +5,19 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test:e2e": "playwright test"
   },
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "@revolist/rv-pro-trial": "^2.0.11",
     "@revolist/rv-enterprise-trial": "^2.0.11",
+    "@revolist/rv-pro-trial": "^2.0.11",
     "typescript": "~5.8.3",
     "vite": "^8.0.11"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.59.1"
   }
 }

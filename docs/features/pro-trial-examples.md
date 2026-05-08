@@ -16,4 +16,4 @@
 
 **Tests:**
 - Unit: Not applicable; this is example composition around packaged plugin APIs.
-- E2E: Build verifies TypeScript and bundling. Browser smoke testing should verify each tab renders after the dev server starts.
+- E2E: `npm run test:e2e` starts the Vite trial app and verifies the Tree, Pivot, and Gantt examples render through the header switch.

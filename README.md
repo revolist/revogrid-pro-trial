@@ -60,10 +60,21 @@ npm run dev
 - `src/examples/gantt.ts` - Gantt grid and toolbar setup.
 - `src/examples/gantt.data.ts` - Gantt project, tasks, dependencies, calendars, resources, and assignments.
 
+## E2E Tests
+
+The e2e tests are intentionally simple for first-time users:
+
+```bash
+npm run test:e2e
+```
+
+The test runner starts Vite, opens the trial app, switches between `Tree`, `Pivot`, and `Gantt`, and checks that each example has rendered.
+
 ## Available Scripts
 
 - `npm run dev` - Start the development server
 - `npm run build` - Build the project for production
+- `npm run test:e2e` - Run the beginner smoke tests for Tree, Pivot, and Gantt
 - `npm run preview` - Preview the production build locally
 
 ## Project Structure
