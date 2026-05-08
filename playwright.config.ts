@@ -1,3 +1,9 @@
+/**
+ * Playwright configuration for the Pro Trial smoke tests.
+ *
+ * The web server block starts the Vite app automatically so a first-time user
+ * can run `npm run test:e2e` without manually starting `npm run dev`.
+ */
 import { defineConfig, devices } from '@playwright/test';
 
 export default defineConfig({

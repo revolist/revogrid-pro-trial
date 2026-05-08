@@ -1,8 +1,17 @@
+/**
+ * Public registry of examples shown by the top switch.
+ *
+ * Add a new example by importing its mount function and appending one
+ * `ExampleDefinition` entry here.
+ */
 import type { ExampleDefinition } from '../shared/types';
 import { mountGanttExample } from './gantt';
 import { mountPivotExample } from './pivot';
 import { mountTreeExample } from './tree';
 
+/**
+ * Ordered list of examples rendered in the app header.
+ */
 export const examples: ExampleDefinition[] = [
   {
     id: 'tree',
@@ -22,7 +31,7 @@ export const examples: ExampleDefinition[] = [
     id: 'gantt',
     label: 'Gantt',
     title: 'Gantt planner',
-    description: 'A small project plan with tasks, dependencies, resources, and timeline controls.',
+    description: 'A simple project plan with task hierarchy, dependencies, progress, and timeline controls.',
     mount: mountGanttExample,
   },
 ];

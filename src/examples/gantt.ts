@@ -1,16 +1,27 @@
+/**
+ * Gantt example using the Enterprise trial `GanttPlugin`.
+ *
+ * Demonstrates a basic project timeline:
+ * task rows, dependencies, tree expansion, timeline resizing, tooltips, and a
+ * compact toolbar. Advanced scheduling, blocking, resource planning, and task
+ * editor flows are intentionally left out.
+ */
 import type { ColumnRegular } from '@revolist/revogrid';
-import { HistoryPlugin, TooltipPlugin, TreeDataPlugin } from '@revolist/rv-pro-trial';
-import {
-  GanttPanelResizePlugin,
-  GanttPlugin,
-  GanttTaskEditorDialogPlugin,
-  defineGanttToolbar,
-} from '@revolist/rv-enterprise-trial';
+import { TooltipPlugin, TreeDataPlugin } from '@revolist/rv-pro-trial';
+import { GanttPanelResizePlugin, GanttPlugin, defineGanttToolbar } from '@revolist/rv-enterprise-trial';
 import { createGrid, percentType } from '../shared/grid';
 import { createPanelScaffold } from '../shared/ui';
 import type { MountCleanup } from '../shared/types';
 import { createGanttProject } from './gantt.data';
 
+/**
+ * Mount the Gantt example into a host element.
+ *
+ * @param parent - Example panel container supplied by the app shell.
+ * @param title - Heading rendered above the grid.
+ * @param description - Short explanatory copy rendered above the grid.
+ * @returns Cleanup function that removes the toolbar and grid.
+ */
 export function mountGanttExample(parent: HTMLElement, title: string, description: string): MountCleanup {
   const { actions, host } = createPanelScaffold(parent, title, description);
   const pill = document.createElement('span');
@@ -18,7 +29,7 @@ export function mountGanttExample(parent: HTMLElement, title: string, descriptio
   const project = createGanttProject();
 
   pill.className = 'status-pill';
-  pill.textContent = 'Editable trial project';
+  pill.textContent = 'Basic timeline';
   actions.appendChild(pill);
 
   grid.source = project.tasks;
@@ -26,20 +37,11 @@ export function mountGanttExample(parent: HTMLElement, title: string, descriptio
   grid.columnTypes = {
     percent: percentType,
   };
-  grid.plugins = [
-    HistoryPlugin,
-    TreeDataPlugin,
-    GanttPanelResizePlugin,
-    GanttTaskEditorDialogPlugin,
-    TooltipPlugin,
-    GanttPlugin,
-  ] as never;
+  grid.plugins = [TreeDataPlugin, GanttPanelResizePlugin, TooltipPlugin, GanttPlugin] as never;
   Object.assign(grid, {
     gantt: project.config,
     ganttDependencies: project.dependencies,
     ganttCalendars: project.calendars,
-    ganttResources: project.resources,
-    ganttAssignments: project.assignments,
     ganttBaselines: project.baselines,
     tree: {
       expandedRowIds: new Set(['discovery', 'delivery']),
@@ -70,12 +72,16 @@ export function mountGanttExample(parent: HTMLElement, title: string, descriptio
     ],
     visuals: {
       showDependencies: true,
-      showCriticalPath: true,
-      showBaseline: true,
+      showCriticalPath: false,
+      showBaseline: false,
     },
     controls: {
+      addTask: false,
+      indent: false,
+      outdent: false,
       export: false,
-      baseline: true,
+      baseline: false,
+      criticalPath: false,
     },
   });
 
@@ -85,6 +91,9 @@ export function mountGanttExample(parent: HTMLElement, title: string, descriptio
   };
 }
 
+/**
+ * Build task-table columns shown to the left of the timeline.
+ */
 function createGanttColumns(): ColumnRegular[] {
   return [
     { prop: 'wbs', name: 'WBS', size: 90 },

@@ -1,3 +1,13 @@
+/**
+ * Sample sales data for the Pivot example.
+ *
+ * The dataset is intentionally small and regular so users can quickly see how
+ * rows, columns, and values map into the pivot output.
+ */
+
+/**
+ * Create sales rows grouped by region, category, and quarter.
+ */
 export function createPivotRows() {
   const rows = [];
   const regions = ['North', 'South', 'West'];

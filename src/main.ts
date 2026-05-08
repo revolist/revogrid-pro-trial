@@ -1,3 +1,12 @@
+/**
+ * Application entry point for the RevoGrid Pro Trial examples.
+ *
+ * Responsibilities:
+ * - Register the RevoGrid custom element once.
+ * - Render the shared examples shell.
+ * - Keep the top switch and URL hash in sync.
+ * - Mount exactly one example at a time and clean it up before switching.
+ */
 import { defineCustomElements } from '@revolist/revogrid/loader';
 import '@revolist/rv-pro-trial/dist/rv-pro-trial.css';
 import '@revolist/rv-enterprise-trial/dist/rv-enterprise-trial.css';
@@ -59,6 +68,11 @@ window.addEventListener('hashchange', () => {
 
 setActiveExample(readExampleFromHash());
 
+/**
+ * Mount an example by id and update the selected tab state.
+ *
+ * @param id - Stable example id from `src/examples/index.ts`.
+ */
 function setActiveExample(id: ExampleId) {
   const example = examples.find((item) => item.id === id) ?? examples[0];
 
@@ -75,6 +89,11 @@ function setActiveExample(id: ExampleId) {
   cleanup = example.mount(panelEl, example.title, example.description);
 }
 
+/**
+ * Read the current example from the URL hash.
+ *
+ * Unknown hashes intentionally fall back to `tree`, the simplest example.
+ */
 function readExampleFromHash(): ExampleId {
   const id = window.location.hash.replace('#', '');
   return examples.some((example) => example.id === id) ? (id as ExampleId) : 'tree';

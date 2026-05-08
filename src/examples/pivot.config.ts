@@ -1,5 +1,14 @@
+/**
+ * Pivot configuration for the Pivot example.
+ *
+ * This file is separated from `pivot.ts` so users can learn the data model
+ * without also reading DOM and grid mounting code.
+ */
 import type { PivotConfig } from '@revolist/rv-enterprise-trial';
 
+/**
+ * Client-side pivot model used by the example grid.
+ */
 export const pivotConfig: PivotConfig = {
   dimensions: [
     { prop: 'region', name: 'Region', order: 'asc' },

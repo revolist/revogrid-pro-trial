@@ -1,3 +1,13 @@
+/**
+ * Sample data for the Tree example.
+ *
+ * Rows use a flat parent/child shape because the Pro `TreeDataPlugin` can build
+ * the hierarchy from `id` and `parentId` fields.
+ */
+
+/**
+ * Create a small workstream hierarchy for the Tree grid.
+ */
 export function createTreeRows() {
   return [
     { id: 'platform', parentId: null, name: 'Platform launch', owner: 'Maya Chen', status: 'Active', budget: 180000 },

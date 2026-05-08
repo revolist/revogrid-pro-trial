@@ -1,3 +1,18 @@
+/**
+ * Small DOM helpers used by the plain TypeScript examples.
+ *
+ * The project intentionally avoids a framework so first-time users can see the
+ * exact DOM nodes and RevoGrid properties involved.
+ */
+
+/**
+ * Build the standard example layout.
+ *
+ * @param parent - Element that receives the toolbar and grid host.
+ * @param title - Panel heading.
+ * @param description - Short explanatory copy below the heading.
+ * @returns The action slot and grid host for the mounted example.
+ */
 export function createPanelScaffold(parent: HTMLElement, title: string, description: string) {
   const toolbar = document.createElement('div');
   toolbar.className = 'panel-toolbar';
@@ -25,6 +40,9 @@ export function createPanelScaffold(parent: HTMLElement, title: string, descript
   return { actions, host };
 }
 
+/**
+ * Create a styled command button for example toolbars.
+ */
 export function createActionButton(label: string) {
   const button = document.createElement('button');
   button.type = 'button';
@@ -33,6 +51,9 @@ export function createActionButton(label: string) {
   return button;
 }
 
+/**
+ * Create a labeled checkbox toggle for compact example options.
+ */
 export function createToggle(labelText: string) {
   const label = document.createElement('label');
   label.className = 'toggle-label';

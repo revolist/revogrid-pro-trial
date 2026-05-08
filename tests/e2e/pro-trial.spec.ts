@@ -1,3 +1,10 @@
+/**
+ * End-to-end smoke tests for the RevoGrid Pro Trial examples.
+ *
+ * These tests intentionally stay simple: they verify that first-time users can
+ * open each top-level example and that the Tree status dropdown shows the same
+ * badge styling in its menu as it does in cells.
+ */
 import { expect, test } from '@playwright/test';
 
 test.describe('RevoGrid Pro trial examples', () => {
@@ -9,7 +16,18 @@ test.describe('RevoGrid Pro trial examples', () => {
     await expect(page.getByRole('tab', { name: 'Tree' })).toHaveAttribute('aria-selected', 'true');
     await expect(page.getByRole('button', { name: 'Expand all' })).toBeVisible();
     await expect(page.getByRole('button', { name: 'Collapse all' })).toBeVisible();
+    await expect(page.locator('.status-badge--active').first()).toBeVisible();
     await expect(page.locator('revo-grid')).toBeVisible();
+  });
+
+  test('shows badge styling inside the Tree status dropdown', async ({ page }) => {
+    await page.goto('/#tree');
+    await page.locator('.status-badge--active').first().click();
+
+    await expect(page.locator('.revo-dropdown-menu .status-badge--planned')).toBeVisible();
+    await expect(page.locator('.revo-dropdown-menu .status-badge--active')).toBeVisible();
+    await expect(page.locator('.revo-dropdown-menu .status-badge--review')).toBeVisible();
+    await expect(page.locator('.revo-dropdown-menu .status-badge--blocked')).toBeVisible();
   });
 
   test('switches to Pivot and exposes the row grouping toggle', async ({ page }) => {
@@ -30,7 +48,7 @@ test.describe('RevoGrid Pro trial examples', () => {
     await expect(page).toHaveURL(/#gantt$/);
     await expect(page.getByRole('heading', { name: 'Gantt planner' })).toBeVisible();
     await expect(page.getByRole('tab', { name: 'Gantt' })).toHaveAttribute('aria-selected', 'true');
-    await expect(page.getByText('Editable trial project')).toBeVisible();
+    await expect(page.getByText('Basic timeline')).toBeVisible();
     await expect(page.getByPlaceholder('Search tasks...')).toBeVisible();
     await expect(page.locator('revo-grid')).toBeVisible();
   });

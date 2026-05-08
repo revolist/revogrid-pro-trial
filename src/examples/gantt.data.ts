@@ -1,24 +1,33 @@
+/**
+ * Project snapshot data for the Gantt example.
+ *
+ * The example keeps the model intentionally small: project configuration,
+ * task rows, dependencies, a working calendar, and an empty baseline list.
+ * Resource planning and smart scheduling policies are omitted on purpose.
+ */
 import type {
-  AssignmentEntity,
   CalendarEntity,
   DependencyEntity,
   GanttPluginConfig,
   ISODateTimeString,
   ISODateString,
-  ResourceEntity,
   TaskEntity,
 } from '@revolist/rv-enterprise-trial';
 
+/**
+ * Complete data bundle consumed by the Gantt example.
+ */
 export type GanttProjectExample = {
   config: GanttPluginConfig;
   tasks: TaskEntity[];
   dependencies: DependencyEntity[];
   calendars: CalendarEntity[];
-  resources: ResourceEntity[];
-  assignments: AssignmentEntity[];
   baselines: [];
 };
 
+/**
+ * Create a small project plan suitable for the trial Gantt example.
+ */
 export function createGanttProject(): GanttProjectExample {
   const projectId = 'trial-project';
   const calendarId = 'standard';
@@ -29,12 +38,13 @@ export function createGanttProject(): GanttProjectExample {
     tasks: createTasks(projectId, calendarId),
     dependencies: createDependencies(),
     calendars: createCalendars(calendarId),
-    resources: createResources(calendarId),
-    assignments: createAssignments(),
     baselines: [],
   };
 }
 
+/**
+ * Build top-level Gantt plugin configuration.
+ */
 function createGanttConfig(projectId: string, calendarId: string, updatedAt: ISODateTimeString): GanttPluginConfig {
   return {
     id: projectId,
@@ -45,17 +55,11 @@ function createGanttConfig(projectId: string, calendarId: string, updatedAt: ISO
     primaryCalendarId: calendarId,
     updatedAt,
     zoomPreset: 'day-week',
-    allowTaskCreate: true,
-    allowTaskCreateByDrag: true,
-    scheduling: {
-      projectStartDate: '2026-05-04',
-      excludeHolidaysFromDuration: true,
-      autoDependencyViolationBehavior: 'warn',
-      manualDependencyViolationBehavior: 'warn',
-    },
+    allowTaskCreate: false,
+    allowTaskCreateByDrag: false,
     visuals: {
       showDependencies: true,
-      showCriticalPath: true,
+      showCriticalPath: false,
       showTaskLabels: true,
       shadeNonWorkingTime: true,
       showTodayLine: true,
@@ -64,6 +68,9 @@ function createGanttConfig(projectId: string, calendarId: string, updatedAt: ISO
   };
 }
 
+/**
+ * Create hierarchical task rows for the project.
+ */
 function createTasks(projectId: string, calendarId: string): TaskEntity[] {
   return [
     task(projectId, calendarId, 'discovery', null, '1', 'Discovery', 'summary', 'in-progress', '2026-05-04', '2026-05-15', 12, 35),
@@ -76,6 +83,9 @@ function createTasks(projectId: string, calendarId: string): TaskEntity[] {
   ];
 }
 
+/**
+ * Create finish-to-start dependencies between task rows.
+ */
 function createDependencies(): DependencyEntity[] {
   return [
     { id: 'd-brief-prototype', predecessorTaskId: 'brief', successorTaskId: 'prototype', type: 'finish-to-start', lagDays: 0 },
@@ -85,6 +95,9 @@ function createDependencies(): DependencyEntity[] {
   ];
 }
 
+/**
+ * Create the standard working calendar used by tasks.
+ */
 function createCalendars(calendarId: string): CalendarEntity[] {
   return [
     {
@@ -98,24 +111,9 @@ function createCalendars(calendarId: string): CalendarEntity[] {
   ];
 }
 
-function createResources(calendarId: string): ResourceEntity[] {
-  return [
-    { id: 'design', name: 'Design Team', role: 'Design', calendarId, allocationCapacity: 100, hourlyCost: 115 },
-    { id: 'engineering', name: 'Engineering', role: 'Build', calendarId, allocationCapacity: 100, hourlyCost: 140 },
-    { id: 'qa', name: 'QA', role: 'Validation', calendarId, allocationCapacity: 100, hourlyCost: 95 },
-  ];
-}
-
-function createAssignments(): AssignmentEntity[] {
-  return [
-    { id: 'a-brief-design', taskId: 'brief', resourceId: 'design', allocationUnits: 80, responsibility: 'Workshop and brief' },
-    { id: 'a-prototype-design', taskId: 'prototype', resourceId: 'design', allocationUnits: 100, responsibility: 'Prototype design' },
-    { id: 'a-grid-eng', taskId: 'grid', resourceId: 'engineering', allocationUnits: 100, responsibility: 'Grid implementation' },
-    { id: 'a-gantt-eng', taskId: 'gantt', resourceId: 'engineering', allocationUnits: 100, responsibility: 'Gantt implementation' },
-    { id: 'a-launch-qa', taskId: 'launch', resourceId: 'qa', allocationUnits: 60, responsibility: 'Launch validation' },
-  ];
-}
-
+/**
+ * Convenience factory for strongly typed Gantt task records.
+ */
 function task(
   projectId: string,
   calendarId: string,
