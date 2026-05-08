@@ -144,6 +144,7 @@ function createTreeColumns(): ColumnRegular[] {
       prop: 'owner',
       size: 210,
       columnType: 'dropdown',
+      readonly: false,
       dropdown: {
         source: ownerOptions,
         placeholder: 'Select owner',
@@ -170,6 +171,7 @@ function createTreeColumns(): ColumnRegular[] {
       prop: 'status',
       size: 150,
       columnType: 'dropdown',
+      readonly: false,
       dropdown: {
         source: statusOptions,
         placeholder: 'Select status',
