@@ -7,6 +7,7 @@
 import type { ExampleDefinition } from '../shared/types';
 import { mountGanttExample } from './gantt';
 import { mountPivotExample } from './pivot';
+import { mountSchedulerExample } from './scheduler';
 import { mountTreeExample } from './tree';
 
 /**
@@ -33,5 +34,12 @@ export const examples: ExampleDefinition[] = [
     title: 'Gantt planner',
     description: 'A simple project plan with task hierarchy, dependencies, progress, and timeline controls.',
     mount: mountGanttExample,
+  },
+  {
+    id: 'scheduler',
+    label: 'Scheduler',
+    title: 'Event scheduler',
+    description: 'A local full-week view with bookings, working hours, availability, and conflict markers.',
+    mount: mountSchedulerExample,
   },
 ];

@@ -222,10 +222,15 @@ h1 {
   display: flex;
 }
 
+.grid-host:not(.pivot-plugin) {
+  flex-direction: column;
+}
+
 revo-grid {
   display: block;
   width: 100%;
   height: 100%;
+  flex-grow: 1;
   min-height: 520px;
 }
 

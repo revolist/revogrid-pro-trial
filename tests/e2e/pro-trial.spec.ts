@@ -61,4 +61,29 @@ test.describe('RevoGrid Pro trial examples', () => {
     await expect(page.getByPlaceholder('Search tasks...')).toBeVisible();
     await expect(page.locator('revo-grid')).toBeVisible();
   });
+
+  test('switches to Scheduler and renders the full week view', async ({ page }) => {
+    await page.goto('/#tree');
+    await page.getByRole('tab', { name: 'Scheduler' }).click();
+
+    await expect(page).toHaveURL(/#scheduler$/);
+    await expect(page.getByRole('tab', { name: 'Scheduler' })).toHaveAttribute('aria-selected', 'true');
+    await expect(page.getByRole('heading', { name: 'Event scheduler' })).toHaveCount(0);
+    await expect(page.getByText('Week view', { exact: true })).toHaveCount(0);
+    await expect(page.locator('revo-grid')).toBeVisible();
+    await expect(page.getByRole('columnheader', { name: /Sun 7/ })).toBeVisible();
+    await expect(page.getByRole('columnheader', { name: /Mon 8/ })).toBeVisible();
+    await expect(page.getByText('Customer kickoff').first()).toBeVisible();
+
+    const kickoffColor = await page
+      .getByRole('button', { name: /Customer kickoff/ })
+      .first()
+      .evaluate((element) => getComputedStyle(element).backgroundColor);
+    const roadmapColor = await page
+      .getByRole('button', { name: /Roadmap review/ })
+      .first()
+      .evaluate((element) => getComputedStyle(element).backgroundColor);
+
+    expect(kickoffColor).not.toBe(roadmapColor);
+  });
 });

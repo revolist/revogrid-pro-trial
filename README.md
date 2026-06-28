@@ -2,13 +2,14 @@
 
 A polished Vite + TypeScript starter for exploring RevoGrid Pro and Enterprise trial features in a small, readable codebase.
 
-The app ships with three professional examples behind one top-level switch:
+The app ships with four professional examples behind one top-level switch:
 
 | Example | What it shows | Good first file |
 | --- | --- | --- |
 | Tree | Hierarchical rows, row selection, row ordering, advanced filters, and Pro dropdown owner/status columns with polished styling | `src/examples/tree.ts` |
 | Pivot | Client-side pivot dimensions, rows, columns, values, subtotals, grand totals, and row grouping | `src/examples/pivot.config.ts` |
 | Gantt | Task hierarchy, dependencies, progress, timeline toolbar, resizing, and tooltips | `src/examples/gantt.ts` |
+| Scheduler | Full-week event scheduling with bookings, working hours, availability, conflict markers, and local callbacks | `src/examples/scheduler.ts` |
 
 ## Quick Start
 
@@ -23,7 +24,7 @@ Open the Vite URL, usually:
 http://127.0.0.1:5173/
 ```
 
-Use the top switch to move between `Tree`, `Pivot`, and `Gantt`.
+Use the top switch to move between `Tree`, `Pivot`, `Gantt`, and `Scheduler`.
 
 ## Scripts
 
@@ -53,6 +54,8 @@ src/
     pivot.data.ts             Pivot row data
     gantt.ts                  Gantt grid, toolbar, plugins, and columns
     gantt.data.ts             Project config, tasks, dependencies, calendar
+    scheduler.ts              Event Scheduler grid, plugin, and callbacks
+    scheduler.data.ts         Scheduler week config, owners, events, availability
 tests/
   e2e/pro-trial.spec.ts       Simple Playwright checks for all examples
 docs/
@@ -95,6 +98,16 @@ The Gantt example is intentionally simple:
 - Enterprise Gantt toolbar with search, zoom, tree, and dependency visibility.
 - No smart blocking, critical-path warnings, resource planning, or task editor flow.
 
+### Scheduler
+
+The Scheduler example demonstrates local Event Scheduler usage:
+- Full-week view starting on Sunday.
+- Scheduled events across day columns and hourly slots.
+- Working hours, blocked availability, and breaks.
+- Overlap conflict marking.
+- Local create, move, resize, update, delete, and selection callbacks.
+- No remote persistence or optimistic rollback flow.
+
 ## E2E Tests
 
 The e2e suite is intentionally simple and beginner-friendly:
@@ -116,6 +129,7 @@ It starts the Vite app, opens each example, checks the top switch, verifies grid
 | Change Tree columns or dropdown styling | `src/examples/tree.ts` and `src/styles.css` |
 | Change Pivot fields or aggregations | `src/examples/pivot.config.ts` |
 | Change Gantt project data | `src/examples/gantt.data.ts` |
+| Change Scheduler owners or bookings | `src/examples/scheduler.data.ts` |
 | Extend smoke coverage | `tests/e2e/pro-trial.spec.ts` |
 
 ## Dependencies

@@ -12,8 +12,8 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "@revolist/rv-enterprise-trial": "^2.1.7",
-    "@revolist/rv-pro-trial": "^2.1.7",
+    "@revolist/rv-enterprise-trial": "^2.2.3",
+    "@revolist/rv-pro-trial": "^2.2.3",
     "typescript": "~5.8.3",
     "vite": "^8.0.11"
   },

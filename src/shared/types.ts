@@ -5,7 +5,7 @@
 /**
  * Stable id for every top-level trial example.
  */
-export type ExampleId = 'tree' | 'pivot' | 'gantt';
+export type ExampleId = 'tree' | 'pivot' | 'gantt' | 'scheduler';
 
 /**
  * Cleanup callback returned by every example after it mounts.
