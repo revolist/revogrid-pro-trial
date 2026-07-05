@@ -219,14 +219,14 @@ h1 {
   overflow: hidden;
   border-radius: 8px;
   background: var(--card);
-  display: flex;
 }
 
 .grid-host:not(.pivot-plugin) {
   flex-direction: column;
+  display: flex;
 }
 
-revo-grid {
+.grid-host:not(.pivot-plugin) revo-grid {
   display: block;
   width: 100%;
   height: 100%;

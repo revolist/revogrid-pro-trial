@@ -1,5 +1,5 @@
 {
-  "name": "test",
+  "name": "revogrid-pro-trial",
   "version": "1.0.0",
   "type": "module",
   "scripts": {
@@ -8,16 +8,16 @@
     "preview": "vite preview",
     "test:e2e": "playwright test"
   },
-  "author": "",
+  "author": "Revolist OU",
   "license": "ISC",
-  "description": "",
+  "description": "RevoGrid Pro Trial",
   "dependencies": {
-    "@revolist/rv-enterprise-trial": "^2.2.3",
-    "@revolist/rv-pro-trial": "^2.2.3",
-    "typescript": "~5.8.3",
-    "vite": "^8.0.11"
+    "@revolist/rv-enterprise-trial": "^2.2.11",
+    "@revolist/rv-pro-trial": "^2.2.11"
   },
   "devDependencies": {
-    "@playwright/test": "^1.59.1"
+    "@playwright/test": "^1.59.1",
+    "typescript": "~5.8.3",
+    "vite": "^8.0.11"
   }
 }
