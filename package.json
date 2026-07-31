@@ -12,8 +12,8 @@
   "license": "ISC",
   "description": "RevoGrid Pro Trial",
   "dependencies": {
-    "@revolist/rv-enterprise-trial": "^2.3.3",
-    "@revolist/rv-pro-trial": "^2.3.3"
+    "@revolist/rv-enterprise-trial": "^2.4.0",
+    "@revolist/rv-pro-trial": "^2.4.0"
   },
   "devDependencies": {
     "@playwright/test": "^1.59.1",
