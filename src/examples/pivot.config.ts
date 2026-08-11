@@ -4,7 +4,7 @@
  * This file is separated from `pivot.ts` so users can learn the data model
  * without also reading DOM and grid mounting code.
  */
-import type { PivotConfig } from '@revolist/rv-enterprise-trial';
+import type { PivotConfig } from '@revolist/pivot';
 
 /**
  * Client-side pivot model used by the example grid.

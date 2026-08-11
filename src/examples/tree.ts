@@ -16,7 +16,7 @@ import {
   TreeDataPlugin,
   TREE_COLLAPSE_ALL_EVENT,
   TREE_EXPAND_ALL_EVENT,
-} from '@revolist/rv-pro-trial';
+} from '@revolist/revogrid-pro';
 import { createGrid, currencyType } from '../shared/grid';
 import { createActionButton, createPanelScaffold } from '../shared/ui';
 import type { MountCleanup } from '../shared/types';

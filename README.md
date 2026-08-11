@@ -1,6 +1,6 @@
 # RevoGrid Pro Trial Examples
 
-A polished Vite + TypeScript starter for exploring RevoGrid Pro and Enterprise trial features in a small, readable codebase.
+A polished Vite + TypeScript starter for exploring the split RevoGrid trial packages in a small, readable codebase.
 
 The app ships with four professional examples behind one top-level switch:
 
@@ -14,8 +14,8 @@ The app ships with four professional examples behind one top-level switch:
 ## Quick Start
 
 ```bash
-npm install
-npm run dev
+pnpm install
+pnpm dev
 ```
 
 Open the Vite URL, usually:
@@ -30,10 +30,10 @@ Use the top switch to move between `Tree`, `Pivot`, `Gantt`, and `Scheduler`.
 
 | Command | Purpose |
 | --- | --- |
-| `npm run dev` | Start the local Vite dev server |
-| `npm run build` | Type-check and build the production bundle |
-| `npm run test:e2e` | Run Playwright smoke tests for the trial examples |
-| `npm run preview` | Preview the production build locally |
+| `pnpm dev` | Start the local Vite dev server |
+| `pnpm build` | Type-check and build the production bundle |
+| `pnpm test:e2e` | Run Playwright smoke tests for the trial examples |
+| `pnpm preview` | Preview the production build locally |
 
 ## Project Layout
 
@@ -95,7 +95,7 @@ The Gantt example is intentionally simple:
 - Finish-to-start dependencies.
 - Working calendar.
 - Progress percentages.
-- Enterprise Gantt toolbar with search, zoom, tree, and dependency visibility.
+- Gantt toolbar with search, zoom, tree, and dependency visibility.
 - No smart blocking, critical-path warnings, resource planning, or task editor flow.
 
 ### Scheduler
@@ -113,7 +113,7 @@ The Scheduler example demonstrates local Event Scheduler usage:
 The e2e suite is intentionally simple and beginner-friendly:
 
 ```bash
-npm run test:e2e
+pnpm test:e2e
 ```
 
 It starts the Vite app, opens each example, checks the top switch, verifies grids render, and confirms the Tree owner/status dropdowns display styled menu options.
@@ -134,15 +134,18 @@ It starts the Vite app, opens each example, checks the top switch, verifies grid
 
 ## Dependencies
 
-- `@revolist/rv-pro-trial`
-- `@revolist/rv-enterprise-trial`
+- `@revolist/revogrid-pro` → `@revolist/rv-pro-trial@2.6.3`
+- `@revolist/pivot` → `@revolist/pivot-trial@2.6.3`
+- `@revolist/gantt` → `@revolist/gantt-trial@2.6.3`
+- `@revolist/scheduler` → `@revolist/scheduler-trial@2.6.3`
+- `@revolist/revogrid@4.25.2`
 - `typescript`
 - `vite`
 - `@playwright/test`
 
 ## Trial Notes
 
-This project uses RevoGrid trial packages. Trial behavior and licensing can differ from the commercial packages, so validate production requirements against your commercial license and package versions before shipping.
+This project installs from the public trial registry configured in `.npmrc`. No authentication token or licence key is required for installation.
 
 ## Resources
 

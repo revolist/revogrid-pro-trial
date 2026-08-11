@@ -8,8 +8,10 @@
  * - Mount exactly one example at a time and clean it up before switching.
  */
 import { defineCustomElements } from '@revolist/revogrid/loader';
-import '@revolist/rv-pro-trial/dist/rv-pro-trial.css';
-import '@revolist/rv-enterprise-trial/dist/rv-enterprise-trial.css';
+import '@revolist/revogrid-pro/styles.css';
+import '@revolist/pivot/styles.css';
+import '@revolist/gantt/styles.css';
+import '@revolist/scheduler/styles.css';
 import './styles.css';
 
 import { examples } from './examples';

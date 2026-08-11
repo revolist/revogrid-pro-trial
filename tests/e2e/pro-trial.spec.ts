@@ -47,7 +47,11 @@ test.describe('RevoGrid Pro trial examples', () => {
     await expect(page.getByRole('heading', { name: 'Pivot analysis' })).toBeVisible();
     await expect(page.getByRole('tab', { name: 'Pivot' })).toHaveAttribute('aria-selected', 'true');
     await expect(page.getByLabel('Row grouping')).toBeVisible();
-    await expect(page.locator('revo-grid')).toBeVisible();
+    await expect(page.getByText('Rows', { exact: true })).toBeVisible();
+    await expect(page.getByText('Columns', { exact: true })).toBeVisible();
+    await expect(page.getByText('Data', { exact: true })).toBeVisible();
+    await expect(page.getByText('Filters', { exact: true })).toBeVisible();
+    await expect(page.locator('revo-grid[theme="material"]')).toBeVisible();
   });
 
   test('switches to Gantt and renders the trial toolbar', async ({ page }) => {
@@ -71,8 +75,10 @@ test.describe('RevoGrid Pro trial examples', () => {
     await expect(page.getByRole('heading', { name: 'Event scheduler' })).toHaveCount(0);
     await expect(page.getByText('Week view', { exact: true })).toHaveCount(0);
     await expect(page.locator('revo-grid')).toBeVisible();
-    await expect(page.getByRole('columnheader', { name: /Sun 7/ })).toBeVisible();
-    await expect(page.getByRole('columnheader', { name: /Mon 8/ })).toBeVisible();
+    const dayHeaders = page.getByRole('columnheader');
+    await expect(dayHeaders).toHaveCount(7);
+    await expect(dayHeaders.nth(0)).toContainText(/Sun.*7/i);
+    await expect(dayHeaders.nth(1)).toContainText(/Mon.*8/i);
     await expect(page.getByText('Customer kickoff').first()).toBeVisible();
 
     const kickoffColor = await page

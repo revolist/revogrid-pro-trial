@@ -11,7 +11,9 @@ temp
 node_modules
 dist
 dist-ssr
+test-results
 *.local
+*_feature.md
 
 # Editor directories and files
 .vscode/*

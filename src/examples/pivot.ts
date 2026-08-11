@@ -1,10 +1,10 @@
 /**
- * Pivot example using the Enterprise trial `PivotPlugin`.
+ * Pivot example using the dedicated trial `PivotPlugin` package.
  *
  * Shows a compact analytics workflow with dimensions, rows, columns, values,
  * totals, and an optional row-grouping toggle.
  */
-import { PivotPlugin, type PivotConfig } from '@revolist/rv-enterprise-trial';
+import { PivotPlugin, type PivotConfig } from '@revolist/pivot';
 import { createGrid, currencyType, percentType } from '../shared/grid';
 import { createPanelScaffold, createToggle } from '../shared/ui';
 import type { MountCleanup } from '../shared/types';

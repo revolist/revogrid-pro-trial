@@ -1,5 +1,5 @@
 /**
- * Local event scheduler data for the Enterprise trial `EventSchedulerPlugin`.
+ * Local event scheduler data for the dedicated trial `EventSchedulerPlugin`.
  *
  * The example uses a week view with a small full-week schedule, working hours,
  * blocked availability, and overlap warnings.
@@ -10,7 +10,7 @@ import type {
   EventSchedulerCreateRangeContext,
   EventSchedulerEventEntity,
   EventSchedulerResourceEntity,
-} from '@revolist/rv-enterprise-trial';
+} from '@revolist/scheduler';
 
 const draftEventColors = ['#9333ea', '#dc2626', '#0891b2', '#ca8a04', '#be185d'];
 

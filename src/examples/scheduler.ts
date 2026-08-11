@@ -1,5 +1,5 @@
 /**
- * Event Scheduler example using the Enterprise trial `EventSchedulerPlugin`.
+ * Event Scheduler example using the dedicated trial `EventSchedulerPlugin` package.
  *
  * Demonstrates a local week scheduler:
  * scheduled events, availability blocks, conflict marking, and callback-driven
@@ -9,7 +9,7 @@ import {
   EventSchedulerPlugin,
   type EventSchedulerEventChangedDetail,
   type EventSchedulerEventDeletedDetail,
-} from '@revolist/rv-enterprise-trial';
+} from '@revolist/scheduler';
 import { createGrid } from '../shared/grid';
 import type { MountCleanup } from '../shared/types';
 import { createSchedulerData } from './scheduler.data';

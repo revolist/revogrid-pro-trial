@@ -1,5 +1,5 @@
 /**
- * Gantt example using the Enterprise trial `GanttPlugin`.
+ * Gantt example using the dedicated trial `GanttPlugin` package.
  *
  * Demonstrates a basic project timeline:
  * task rows, dependencies, tree expansion, timeline resizing, tooltips, and a
@@ -7,8 +7,8 @@
  * editor flows are intentionally left out.
  */
 import type { ColumnRegular } from '@revolist/revogrid';
-import { TooltipPlugin, TreeDataPlugin } from '@revolist/rv-pro-trial';
-import { GanttPanelResizePlugin, GanttPlugin, defineGanttToolbar } from '@revolist/rv-enterprise-trial';
+import { TooltipPlugin, TreeDataPlugin } from '@revolist/revogrid-pro';
+import { GanttPanelResizePlugin, GanttPlugin, defineGanttToolbar } from '@revolist/gantt';
 import { createGrid, percentType } from '../shared/grid';
 import { createPanelScaffold } from '../shared/ui';
 import type { MountCleanup } from '../shared/types';
@@ -65,7 +65,7 @@ export function mountGanttExample(parent: HTMLElement, title: string, descriptio
     grid,
     columns: [
       { prop: 'wbs', label: 'WBS' },
-      { prop: 'status', label: 'Status' },
+      { prop: 'workflowStatus', label: 'Status' },
       { prop: 'startDate', label: 'Start' },
       { prop: 'endDate', label: 'Finish' },
       { prop: 'percentDone', label: 'Done' },
@@ -98,7 +98,7 @@ function createGanttColumns(): ColumnRegular[] {
   return [
     { prop: 'wbs', name: 'WBS', size: 90 },
     { prop: 'name', name: 'Task', size: 220, tree: true },
-    { prop: 'status', name: 'Status', size: 130 },
+    { prop: 'workflowStatus', name: 'Status', size: 130 },
     { prop: 'startDate', name: 'Start', size: 130 },
     { prop: 'endDate', name: 'Finish', size: 130 },
     { prop: 'percentDone', name: 'Done', size: 110, columnType: 'percent' },

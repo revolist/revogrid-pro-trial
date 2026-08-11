@@ -9,17 +9,17 @@ import type {
   CalendarEntity,
   DependencyEntity,
   GanttPluginConfig,
+  GanttTaskSourceRow,
   ISODateTimeString,
   ISODateString,
-  TaskEntity,
-} from '@revolist/rv-enterprise-trial';
+} from '@revolist/gantt';
 
 /**
  * Complete data bundle consumed by the Gantt example.
  */
 export type GanttProjectExample = {
   config: GanttPluginConfig;
-  tasks: TaskEntity[];
+  tasks: GanttTaskSourceRow[];
   dependencies: DependencyEntity[];
   calendars: CalendarEntity[];
   baselines: [];
@@ -71,7 +71,7 @@ function createGanttConfig(projectId: string, calendarId: string, updatedAt: ISO
 /**
  * Create hierarchical task rows for the project.
  */
-function createTasks(projectId: string, calendarId: string): TaskEntity[] {
+function createTasks(projectId: string, calendarId: string): GanttTaskSourceRow[] {
   return [
     task(projectId, calendarId, 'discovery', null, '1', 'Discovery', 'summary', 'in-progress', '2026-05-04', '2026-05-15', 12, 35),
     task(projectId, calendarId, 'brief', 'discovery', '1.1', 'Stakeholder brief', 'task', 'done', '2026-05-04', '2026-05-06', 3, 100),
@@ -121,13 +121,13 @@ function task(
   parentId: string | null,
   wbsCode: string,
   name: string,
-  type: TaskEntity['type'],
-  status: TaskEntity['status'],
+  type: GanttTaskSourceRow['type'],
+  workflowStatus: GanttTaskSourceRow['workflowStatus'],
   startDate: ISODateString,
   endDate: ISODateString,
   durationDays: number,
   progressPercent: number,
-): TaskEntity {
+): GanttTaskSourceRow {
   return {
     id,
     projectId,
@@ -135,10 +135,10 @@ function task(
     wbsCode,
     name,
     type,
-    status,
+    workflowStatus,
     startDate,
     endDate,
-    durationDays,
+    duration: durationDays,
     progressPercent,
     calendarId,
     isCritical: false,
