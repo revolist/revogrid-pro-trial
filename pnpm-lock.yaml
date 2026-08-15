@@ -53,10 +53,10 @@ packages:
     hasBin: true
 
   '@revolist/gantt-trial@2.6.3':
-    resolution: {integrity: sha512-Pm9I2f+rTrbk+5iqTMJU7Kj7ik+2tqAOV8xOpLK63ik7ctVnrl6GuiOy+kD68scpj5BmzFONDO8WQZ3uynO3aA==, tarball: http://trial.rv-grid.com/@revolist/gantt-trial/-/c33dc7d2eec884c737be740ebeff65a4a7808cb9}
+    resolution: {integrity: sha512-Pm9I2f+rTrbk+5iqTMJU7Kj7ik+2tqAOV8xOpLK63ik7ctVnrl6GuiOy+kD68scpj5BmzFONDO8WQZ3uynO3aA==, tarball: https://trial.rv-grid.com/@revolist/gantt-trial/-/c33dc7d2eec884c737be740ebeff65a4a7808cb9}
 
   '@revolist/pivot-trial@2.6.3':
-    resolution: {integrity: sha512-yw+iZvO7VUify+ka2gJZfnYyOBrKaBVvMtdcir4+MZcxcpYIjkCC9+QV2IuMCxx1RGnAyzewzWWa/VuIABcnjA==, tarball: http://trial.rv-grid.com/@revolist/pivot-trial/-/e251267a5b9a18e95b0755e4c64c926cceb0cbd7}
+    resolution: {integrity: sha512-yw+iZvO7VUify+ka2gJZfnYyOBrKaBVvMtdcir4+MZcxcpYIjkCC9+QV2IuMCxx1RGnAyzewzWWa/VuIABcnjA==, tarball: https://trial.rv-grid.com/@revolist/pivot-trial/-/e251267a5b9a18e95b0755e4c64c926cceb0cbd7}
 
   '@revolist/revo-dropdown@3.0.9':
     resolution: {integrity: sha512-p30DP8WYSgYnZA2D5nTdNxB7aFpK1N2Z0E/o/E3mlOTDA2+E9c6jRP5/+7v8giJfzFUUsdom+jsMOWLf3e6mSg==}
@@ -71,10 +71,10 @@ packages:
     resolution: {integrity: sha512-jypkUPedKfymW6OpwxC8B3u7plYxNjtzQDkOCC4dL5kfDyi4fRNWYiktStu9dRQ2WCC0l7D9WUASBLVX2ajb3Q==}
 
   '@revolist/rv-pro-trial@2.6.3':
-    resolution: {integrity: sha512-wq8FvolVje+shMCwiUjIgOaP20rYBOpwtuSJf5sTTCn9aH5Kz9LRu5nuaIrMZQI4Ps0/mf0vncbXbarGtD29sg==, tarball: http://trial.rv-grid.com/@revolist/rv-pro-trial/-/1afd7e0edfc969de45bc0959429239da6647facf}
+    resolution: {integrity: sha512-wq8FvolVje+shMCwiUjIgOaP20rYBOpwtuSJf5sTTCn9aH5Kz9LRu5nuaIrMZQI4Ps0/mf0vncbXbarGtD29sg==, tarball: https://trial.rv-grid.com/@revolist/rv-pro-trial/-/1afd7e0edfc969de45bc0959429239da6647facf}
 
   '@revolist/scheduler-trial@2.6.3':
-    resolution: {integrity: sha512-ufSA2F5M2GfJMTZjSz7LM2WIQPfj5MLP780ex266z7W7/kJKjyAHp0yRIPD+S8I062uEZ2CCAqDke6dcyLgyeQ==, tarball: http://trial.rv-grid.com/@revolist/scheduler-trial/-/44c5777bb62cc19b335ff337268a2857ba48890d}
+    resolution: {integrity: sha512-ufSA2F5M2GfJMTZjSz7LM2WIQPfj5MLP780ex266z7W7/kJKjyAHp0yRIPD+S8I062uEZ2CCAqDke6dcyLgyeQ==, tarball: https://trial.rv-grid.com/@revolist/scheduler-trial/-/44c5777bb62cc19b335ff337268a2857ba48890d}
 
   '@rolldown/binding-android-arm64@1.2.3':
     resolution: {integrity: sha512-zrJtHDcaZJ1Fp7xf4hNl+7seH9Cn/N5TwLYkhgXREtBwAd/jaqW3uqeHxpDugJLVICWg4eW44kOQEGJ1r6jCGw==}

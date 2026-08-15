@@ -13,6 +13,18 @@ The app ships with four professional examples behind one top-level switch:
 
 ## Quick Start
 
+Prerequisites:
+
+- Node.js 22.12 through 26.x. Node.js 24 LTS is used by release verification.
+- pnpm 10.5.2 or newer in the pnpm 10 line.
+
+If pnpm is not installed, enable the version declared by this repository:
+
+```bash
+corepack enable
+corepack install
+```
+
 ```bash
 pnpm install
 pnpm dev
@@ -32,6 +44,7 @@ Use the top switch to move between `Tree`, `Pivot`, `Gantt`, and `Scheduler`.
 | --- | --- |
 | `pnpm dev` | Start the local Vite dev server |
 | `pnpm build` | Type-check and build the production bundle |
+| `pnpm test:e2e:install` | Install the Chromium browser used by the smoke tests |
 | `pnpm test:e2e` | Run Playwright smoke tests for the trial examples |
 | `pnpm preview` | Preview the production build locally |
 
@@ -113,10 +126,15 @@ The Scheduler example demonstrates local Event Scheduler usage:
 The e2e suite is intentionally simple and beginner-friendly:
 
 ```bash
+pnpm test:e2e:install # once on a new machine
 pnpm test:e2e
 ```
 
-It starts the Vite app, opens each example, checks the top switch, verifies grids render, and confirms the Tree owner/status dropdowns display styled menu options.
+It starts an isolated Vite server on `127.0.0.1:41738`, opens each example,
+checks the top switch, verifies grids render, and confirms the Tree owner/status
+dropdowns display styled menu options. The fixed port is strict and Playwright
+never reuses an existing server, so an unrelated local app cannot produce a
+false-positive result.
 
 ## Customization Guide
 
@@ -145,7 +163,18 @@ It starts the Vite app, opens each example, checks the top switch, verifies grid
 
 ## Trial Notes
 
-This project installs from the public trial registry configured in `.npmrc`. No authentication token or licence key is required for installation.
+This project installs from the public trial registry configured in `.npmrc`. No authentication token, npm login, licence key, form submission, or approval email is required for installation.
+
+The main Pro trial package exposes the same Pro plugin modules as the full Pro
+package. Pivot, Gantt, Scheduler, and Kanban use separate trial packages. This
+starter demonstrates Tree, Pivot, Gantt, and Scheduler; Kanban is available but
+is not mounted in this starter. Collaborative Editing is also distributed as a
+separate package, `@revolist/revogrid-collaborative-editing-trial`, and is not
+mounted in this starter.
+
+See the [trial package and feature inventory](https://pro.rv-grid.com/legal/trial/)
+before assuming that a separately distributed package is part of the public
+trial.
 
 ## Resources
 
