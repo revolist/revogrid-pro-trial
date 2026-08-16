@@ -153,19 +153,27 @@ function createTreeColumns(): ColumnRegular[] {
       size: 210,
       columnType: 'dropdown',
       readonly: false,
-      cellTemplate: (h, { model, value }) => renderOwnerChip(
-        h,
-        resolveOwnerOption(value, model as Partial<OwnerOption>),
-        'compact',
-      ),
       dropdown: {
         source: ownerOptions,
-        syncCellTemplate: true,
         placeholder: 'Select owner',
         config: {
           ariaLabel: 'Owner',
           popupClassName: 'owner-dropdown-menu',
         },
+        renderSelectedValue: (h, selectedOptions, children) => {
+          const selected = selectedOptions[0] as OwnerOption | undefined;
+          return h('div', { class: 'owner-dropdown-value' }, [
+            selected
+              ? renderOwnerChip(h, selected, 'compact')
+              : h('span', { class: 'owner-placeholder' }, 'Select owner'),
+            children,
+          ]);
+        },
+        renderOption: (h, option) => h(
+          'div',
+          { class: 'owner-dropdown-option' },
+          renderOwnerChip(h, option as OwnerOption, 'menu'),
+        ),
       },
       sortable: true,
       filter: ['selection'],
@@ -176,18 +184,27 @@ function createTreeColumns(): ColumnRegular[] {
       size: 150,
       columnType: 'dropdown',
       readonly: false,
-      cellTemplate: (h, { model, value }) => renderStatusBadge(
-        h,
-        resolveStatusOption(value, model as Partial<(typeof statusOptions)[number]>),
-      ),
       dropdown: {
         source: statusOptions,
-        syncCellTemplate: true,
         placeholder: 'Select status',
         config: {
           ariaLabel: 'Status',
           popupClassName: 'status-dropdown-menu',
         },
+        renderSelectedValue: (h, selectedOptions, children) => {
+          const selected = selectedOptions[0] as (typeof statusOptions)[number] | undefined;
+          return h('div', { class: 'status-dropdown-value' }, [
+            selected
+              ? renderStatusBadge(h, selected)
+              : h('span', { class: 'status-placeholder' }, 'Select status'),
+            children,
+          ]);
+        },
+        renderOption: (h, option) => h(
+          'div',
+          { class: 'status-dropdown-option' },
+          renderStatusBadge(h, option as (typeof statusOptions)[number]),
+        ),
       },
       filter: ['selection'],
     },
@@ -202,29 +219,6 @@ function createTreeColumns(): ColumnRegular[] {
 }
 
 type CellRenderFunction = (tag: string, props: Record<string, unknown>, children?: unknown) => unknown;
-
-function resolveOwnerOption(value: unknown, metadata: Partial<OwnerOption>): OwnerOption {
-  const fallback = ownerOptions.find(option => option.value === value) ?? ownerOptions[0];
-  return {
-    ...fallback,
-    ...metadata,
-    value: String(value ?? fallback.value) as TreeOwner,
-    label: String(metadata.label ?? fallback.label),
-  };
-}
-
-function resolveStatusOption(
-  value: unknown,
-  metadata: Partial<(typeof statusOptions)[number]>,
-): (typeof statusOptions)[number] {
-  const fallback = statusOptions.find(option => option.value === value) ?? statusOptions[0];
-  return {
-    ...fallback,
-    ...metadata,
-    value: String(value ?? fallback.value) as TreeStatus,
-    label: String(metadata.label ?? fallback.label),
-  };
-}
 
 /**
  * Render a user chip for the Owner cell or dropdown option.
