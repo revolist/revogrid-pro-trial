@@ -13,6 +13,10 @@ The app ships with four professional examples behind one top-level switch:
 
 ## Quick Start
 
+Follow the [RevoGrid Pro trial installation guide](https://pro.rv-grid.com/guides/installation-npm-trial/)
+for the current public registry setup, package names, CSS imports, and clean
+installation steps.
+
 Prerequisites:
 
 - Node.js 22.12 through 26.x. Node.js 24 LTS is used by release verification.
@@ -178,6 +182,7 @@ trial.
 
 ## Resources
 
+- Trial installation guide: https://pro.rv-grid.com/guides/installation-npm-trial/
 - RevoGrid documentation: https://rv-grid.com
 - Hosted demos: https://demo.rv-grid.com
 - Pro trial details: https://pro.rv-grid.com
