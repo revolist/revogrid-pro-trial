@@ -156,10 +156,10 @@ false-positive result.
 
 ## Dependencies
 
-- `@revolist/revogrid-pro` → `@revolist/rv-pro-trial@2.7.10`
-- `@revolist/pivot` → `@revolist/pivot-trial@2.7.10`
-- `@revolist/gantt` → `@revolist/gantt-trial@2.7.10`
-- `@revolist/scheduler` → `@revolist/scheduler-trial@2.7.10`
+- `@revolist/revogrid-pro` → `@revolist/rv-pro-trial@2.7.12`
+- `@revolist/pivot` → `@revolist/pivot-trial@2.7.12`
+- `@revolist/gantt` → `@revolist/gantt-trial@2.7.12`
+- `@revolist/scheduler` → `@revolist/scheduler-trial@2.7.12`
 - `@revolist/revogrid@4.25.2`
 - `typescript`
 - `vite`
