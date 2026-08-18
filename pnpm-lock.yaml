@@ -9,20 +9,20 @@ importers:
   .:
     dependencies:
       '@revolist/gantt':
-        specifier: npm:@revolist/gantt-trial@2.7.4
-        version: '@revolist/gantt-trial@2.7.4'
+        specifier: npm:@revolist/gantt-trial@2.7.10
+        version: '@revolist/gantt-trial@2.7.10'
       '@revolist/pivot':
-        specifier: npm:@revolist/pivot-trial@2.7.4
-        version: '@revolist/pivot-trial@2.7.4'
+        specifier: npm:@revolist/pivot-trial@2.7.10
+        version: '@revolist/pivot-trial@2.7.10'
       '@revolist/revogrid':
         specifier: 4.25.2
         version: 4.25.2
       '@revolist/revogrid-pro':
-        specifier: npm:@revolist/rv-pro-trial@2.7.4
-        version: '@revolist/rv-pro-trial@2.7.4'
+        specifier: npm:@revolist/rv-pro-trial@2.7.10
+        version: '@revolist/rv-pro-trial@2.7.10'
       '@revolist/scheduler':
-        specifier: npm:@revolist/scheduler-trial@2.7.4
-        version: '@revolist/scheduler-trial@2.7.4'
+        specifier: npm:@revolist/scheduler-trial@2.7.10
+        version: '@revolist/scheduler-trial@2.7.10'
     devDependencies:
       '@playwright/test':
         specifier: 1.62.1
@@ -52,11 +52,11 @@ packages:
     engines: {node: '>=20'}
     hasBin: true
 
-  '@revolist/gantt-trial@2.7.4':
-    resolution: {integrity: sha512-1VRZ8P1Mhk7aCDK1xQvWx8O44wi5JF9uGApnpQWSVU77wZF7BCpVZoL9KA8L/QvMlGL8a5yq/OlUIi0+EUH/Hw==, tarball: https://trial.rv-grid.com/@revolist/gantt-trial/-/76e761c24449d89e3c2b8efab1f500a9e767d4f2}
+  '@revolist/gantt-trial@2.7.10':
+    resolution: {integrity: sha512-3WR/Q1ajZn31rFvqpQe6qSOBKDjIMMQrlyA20fD61O/424FzBzOG3foELdI6o5yWNRYCon51iv+hdwtz9Fp7CQ==, tarball: https://trial.rv-grid.com/@revolist/gantt-trial/-/154414b3603267342d4fcbe4f7d67108ed518575}
 
-  '@revolist/pivot-trial@2.7.4':
-    resolution: {integrity: sha512-fUY6mIwJ/0Eowt0VdFBZZUFW0iSzBP+5hft73M7qnR/LH3+LkCkd69bLjzrANqXIvsw46dT5Icp9B7M7RrlxRA==, tarball: https://trial.rv-grid.com/@revolist/pivot-trial/-/66314b0f3cc1ae7af05281e38d079972a846d5ae}
+  '@revolist/pivot-trial@2.7.10':
+    resolution: {integrity: sha512-M+YjxICbvH96Aj+7VgTTH21moXaSVvWvM4aP4IJBVMTQl6/F/fyZlmHv8GWYSXsGIpHDiO8hUdKKFAjZpM59nQ==, tarball: https://trial.rv-grid.com/@revolist/pivot-trial/-/c37db66ddfb5085f157e7139720e972609574da2}
 
   '@revolist/revo-dropdown@3.0.9':
     resolution: {integrity: sha512-p30DP8WYSgYnZA2D5nTdNxB7aFpK1N2Z0E/o/E3mlOTDA2+E9c6jRP5/+7v8giJfzFUUsdom+jsMOWLf3e6mSg==}
@@ -70,11 +70,11 @@ packages:
   '@revolist/revogrid@4.25.2':
     resolution: {integrity: sha512-jypkUPedKfymW6OpwxC8B3u7plYxNjtzQDkOCC4dL5kfDyi4fRNWYiktStu9dRQ2WCC0l7D9WUASBLVX2ajb3Q==}
 
-  '@revolist/rv-pro-trial@2.7.4':
-    resolution: {integrity: sha512-17rO5Nm/+QLAcVHyJAVDobPhDIAIN5559NCbhe5UqDUjJxJK1k0vAuCRJsgB0oVCxYjjlNgeUfG2t5XwoLiI6w==, tarball: https://trial.rv-grid.com/@revolist/rv-pro-trial/-/3b1d79bfb34945ade8f7f17b21cb3a9aaa50486d}
+  '@revolist/rv-pro-trial@2.7.10':
+    resolution: {integrity: sha512-ADU6SRmCcIdLnQesZi2jcEyIzXCWhSvyV1accJywVkwfkVZ3NcApVWmLOelfogTj+SVz51cODdoT7Qkiq6MZvw==, tarball: https://trial.rv-grid.com/@revolist/rv-pro-trial/-/3192dcf3c8d9b60263aa627af58d49abcb75e6a3}
 
-  '@revolist/scheduler-trial@2.7.4':
-    resolution: {integrity: sha512-nIJim31IhGK/BpCfQW7P5yuNkeo4MC3Q22utruh6yFD2nxJyo97xJBLbXf9hFfqL3FU+ZocWg2UFcTZfCPRZtg==, tarball: https://trial.rv-grid.com/@revolist/scheduler-trial/-/72ed797baa957be686cbafbe4727abc9365ded76}
+  '@revolist/scheduler-trial@2.7.10':
+    resolution: {integrity: sha512-ITTpH8Lg12CDFLoYm5swII5BP+BRcYpJsECW77QrbmatG1ujLtGzyMQfu1R49N/ZkpIf3eMwf17JnaGLVSwbsw==, tarball: https://trial.rv-grid.com/@revolist/scheduler-trial/-/9042e5bcb3cc0b284821f47376ccf9253bb82284}
 
   '@rolldown/binding-android-arm64@1.2.3':
     resolution: {integrity: sha512-zrJtHDcaZJ1Fp7xf4hNl+7seH9Cn/N5TwLYkhgXREtBwAd/jaqW3uqeHxpDugJLVICWg4eW44kOQEGJ1r6jCGw==}
@@ -417,19 +417,19 @@ snapshots:
     dependencies:
       playwright: 1.62.1
 
-  '@revolist/gantt-trial@2.7.4':
+  '@revolist/gantt-trial@2.7.10':
     dependencies:
       '@fortawesome/fontawesome-free': 7.3.1
       '@revolist/revogrid': 4.25.2
       '@revolist/revogrid-column-date': 2.0.25
       '@revolist/revogrid-column-select': 3.2.0
-      '@revolist/rv-pro-trial': 2.7.4
+      '@revolist/rv-pro-trial': 2.7.10
 
-  '@revolist/pivot-trial@2.7.4':
+  '@revolist/pivot-trial@2.7.10':
     dependencies:
       '@fortawesome/fontawesome-free': 7.3.1
       '@revolist/revogrid': 4.25.2
-      '@revolist/rv-pro-trial': 2.7.4
+      '@revolist/rv-pro-trial': 2.7.10
 
   '@revolist/revo-dropdown@3.0.9': {}
 
@@ -442,17 +442,17 @@ snapshots:
 
   '@revolist/revogrid@4.25.2': {}
 
-  '@revolist/rv-pro-trial@2.7.4':
+  '@revolist/rv-pro-trial@2.7.10':
     dependencies:
       '@formulajs/formulajs': 4.6.1
       '@revolist/revogrid': 4.25.2
       write-excel-file: 4.1.1
 
-  '@revolist/scheduler-trial@2.7.4':
+  '@revolist/scheduler-trial@2.7.10':
     dependencies:
       '@fortawesome/fontawesome-free': 7.3.1
       '@revolist/revogrid': 4.25.2
-      '@revolist/rv-pro-trial': 2.7.4
+      '@revolist/rv-pro-trial': 2.7.10
 
   '@rolldown/binding-android-arm64@1.2.3':
     optional: true
