@@ -20,7 +20,7 @@
   "dependencies": {
     "@revolist/gantt": "npm:@revolist/gantt-trial@2.7.15",
     "@revolist/pivot": "npm:@revolist/pivot-trial@2.7.15",
-    "@revolist/revogrid": "4.25.2",
+    "@revolist/revogrid": "4.27.0",
     "@revolist/revogrid-pro": "npm:@revolist/rv-pro-trial@2.7.15",
     "@revolist/scheduler": "npm:@revolist/scheduler-trial@2.7.15"
   },
