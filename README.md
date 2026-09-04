@@ -160,7 +160,7 @@ false-positive result.
 - `@revolist/pivot` → `@revolist/pivot-trial@2.8.2`
 - `@revolist/gantt` → `@revolist/gantt-trial@2.8.2`
 - `@revolist/scheduler` → `@revolist/scheduler-trial@2.8.2`
-- `@revolist/revogrid@4.27.0`
+- `@revolist/revogrid@4.27.6`
 - `typescript`
 - `vite`
 - `@playwright/test`
