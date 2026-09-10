@@ -156,10 +156,10 @@ false-positive result.
 
 ## Dependencies
 
-- `@revolist/revogrid-pro` → `@revolist/rv-pro-trial@2.8.5`
-- `@revolist/pivot` → `@revolist/pivot-trial@2.8.5`
-- `@revolist/gantt` → `@revolist/gantt-trial@2.8.5`
-- `@revolist/scheduler` → `@revolist/scheduler-trial@2.8.5`
+- `@revolist/revogrid-pro` → `@revolist/rv-pro-trial@2.8.6`
+- `@revolist/pivot` → `@revolist/pivot-trial@2.8.6`
+- `@revolist/gantt` → `@revolist/gantt-trial@2.8.6`
+- `@revolist/scheduler` → `@revolist/scheduler-trial@2.8.6`
 - `@revolist/revogrid@4.27.6`
 - `typescript`
 - `vite`
@@ -168,6 +168,12 @@ false-positive result.
 ## Trial Notes
 
 This project installs from the public trial registry configured in `.npmrc`. No authentication token, npm login, licence key, form submission, or approval email is required for installation.
+
+The 30-day evaluation period begins when a trial grid first runs. Its first-use
+date is remembered in browser storage for the current origin and shared by all
+RevoGrid trial products on that origin. The footer shows the remaining days and
+becomes an expired-trial notice after day 30. The starter still opens and
+displays its data after expiry, but its grids become read-only.
 
 The main Pro trial package exposes the same Pro plugin modules as the full Pro
 package. Pivot, Gantt, Scheduler, and Kanban use separate trial packages. This
@@ -179,6 +185,28 @@ mounted in this starter.
 See the [trial package and feature inventory](https://pro.rv-grid.com/legal/trial/)
 before assuming that a separately distributed package is part of the public
 trial.
+
+## Upgrade to Paid Packages
+
+This starter uses npm aliases so its TypeScript imports already use the paid
+package names. After purchasing, replace each trial alias in `package.json` with
+the matching paid package version:
+
+```json
+{
+  "dependencies": {
+    "@revolist/revogrid-pro": "<paid-version>",
+    "@revolist/pivot": "<paid-version>",
+    "@revolist/gantt": "<paid-version>",
+    "@revolist/scheduler": "<paid-version>"
+  }
+}
+```
+
+Then configure paid registry access as described in the [paid installation
+guide](https://pro.rv-grid.com/guides/installation/) and run `pnpm install`.
+The existing imports, including
+`import '@revolist/revogrid-pro/styles.css'`, do not need to change.
 
 ## Resources
 
