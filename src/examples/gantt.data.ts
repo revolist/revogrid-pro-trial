@@ -56,7 +56,6 @@ function createGanttConfig(projectId: string, calendarId: string, updatedAt: ISO
     updatedAt,
     zoomPreset: 'day-week',
     allowTaskCreate: false,
-    allowTaskCreateByDrag: false,
     visuals: {
       showDependencies: true,
       showCriticalPath: false,

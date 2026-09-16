@@ -32,7 +32,7 @@ export function mountSchedulerExample(parent: HTMLElement, _title: string, _desc
 
   const setEvents = (nextEvents: readonly typeof scheduler.events[number][]) => {
     events = [...nextEvents];
-    Object.assign(grid, { eventSchedulerEvents: events });
+    Object.assign(grid, { source: events });
   };
 
   const syncEvents = (detail: EventSchedulerEventChangedDetail) => {
@@ -52,7 +52,7 @@ export function mountSchedulerExample(parent: HTMLElement, _title: string, _desc
         setEvents(detail.events);
       },
     },
-    eventSchedulerEvents: events,
+    source: events,
     eventSchedulerResources: scheduler.resources,
     eventSchedulerAvailability: scheduler.availability,
   });
