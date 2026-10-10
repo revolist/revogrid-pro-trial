@@ -15,8 +15,8 @@ importers:
         specifier: npm:@revolist/pivot-trial@2.9.5
         version: '@revolist/pivot-trial@2.9.5'
       '@revolist/revogrid':
-        specifier: 4.27.10
-        version: 4.27.10
+        specifier: 4.28.0
+        version: 4.28.0
       '@revolist/revogrid-pro':
         specifier: npm:@revolist/rv-pro-trial@2.9.5
         version: '@revolist/rv-pro-trial@2.9.5'
@@ -66,9 +66,6 @@ packages:
 
   '@revolist/revogrid-column-select@3.2.4':
     resolution: {integrity: sha512-EIaqMiv6YBMTY+p5N0p3MVF1YSnnbky1siMIeWkxwhJ0+YXbiQtlYBLYvLQ5LZGPee93e/z/5XHfJrsBf9c0Vg==}
-
-  '@revolist/revogrid@4.27.10':
-    resolution: {integrity: sha512-ajsbms3Qym//qf4swYQsE21vd0jiHd6NRwWWuUut/pn/LXwId9aEGj5fEcPWK+XCuKgt5xXh18FOMmPxXnryrg==}
 
   '@revolist/revogrid@4.28.0':
     resolution: {integrity: sha512-Ir+QA69S7Qim4p+RGYPYMYVV9FvJaU+fudIMnR1yniSr6L4xPjDVkIldfLTHN+zHx2f9OKGn1aUUdPXEVuCJkA==}
@@ -442,8 +439,6 @@ snapshots:
     dependencies:
       '@revolist/revo-dropdown': 3.0.12
       '@stencil/core': 4.43.5
-
-  '@revolist/revogrid@4.27.10': {}
 
   '@revolist/revogrid@4.28.0': {}
 
