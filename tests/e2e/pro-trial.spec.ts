@@ -47,10 +47,11 @@ test.describe('RevoGrid Pro trial examples', () => {
     await expect(page.getByRole('heading', { name: 'Pivot analysis' })).toBeVisible();
     await expect(page.getByRole('tab', { name: 'Pivot' })).toHaveAttribute('aria-selected', 'true');
     await expect(page.getByLabel('Row grouping')).toBeVisible();
-    await expect(page.getByText('Rows', { exact: true })).toBeVisible();
-    await expect(page.getByText('Columns', { exact: true })).toBeVisible();
-    await expect(page.getByText('Data', { exact: true })).toBeVisible();
-    await expect(page.getByText('Filters', { exact: true })).toBeVisible();
+    const layout = page.getByRole('tabpanel', { name: 'Layout', exact: true });
+    await expect(layout.getByText('Rows', { exact: true })).toBeVisible();
+    await expect(layout.getByText('Columns', { exact: true })).toBeVisible();
+    await expect(layout.getByText('Values', { exact: true })).toBeVisible();
+    await expect(layout.getByText('Filters', { exact: true })).toBeVisible();
     await expect(page.locator('revo-grid[theme="material"]')).toBeVisible();
   });
 
@@ -91,5 +92,43 @@ test.describe('RevoGrid Pro trial examples', () => {
       .evaluate((element) => getComputedStyle(element).backgroundColor);
 
     expect(kickoffColor).not.toBe(roadmapColor);
+  });
+
+  test('shows authored progress in the Gantt Done column', async ({ page }) => {
+    await page.goto('/#gantt');
+    await page.getByRole('combobox').click();
+    for (const name of ['WBS', 'Status', 'Start', 'Finish']) {
+      await page.getByRole('option', { name, exact: true }).click();
+    }
+    await page.keyboard.press('Escape');
+
+    const brief = page.getByRole('row').filter({
+      has: page.getByRole('gridcell', { name: 'Stakeholder brief', exact: true }),
+    });
+    const prototype = page.getByRole('row').filter({
+      has: page.getByRole('gridcell', { name: 'Prototype review', exact: true }),
+    });
+    await expect(brief.getByRole('progressbar', { name: '100%', exact: true })).toBeVisible();
+    await expect(prototype.getByRole('progressbar', { name: '45%', exact: true })).toBeVisible();
+    const summary = page.getByRole('row').filter({
+      has: page.locator('.gantt-task-name-cell').filter({ hasText: 'Discovery' }),
+    }).getByRole('progressbar');
+    await expect(summary).toBeVisible();
+    const summaryProgress = Number(await summary.getAttribute('aria-valuenow'));
+    expect(summaryProgress).toBeGreaterThan(45);
+    expect(summaryProgress).toBeLessThan(100);
+  });
+
+  test('renders a single hierarchy toggle and collapses Gantt children', async ({ page }) => {
+    await page.goto('/#gantt');
+    const taskNames = page.locator('.gantt-task-name-cell');
+    const discovery = taskNames.filter({ hasText: 'Discovery' });
+    const child = taskNames.filter({ hasText: 'Stakeholder brief' });
+    await expect(child).toBeVisible();
+    await expect(discovery.locator('.tree-toggle')).toHaveCount(1);
+    await discovery.locator('.tree-toggle').click();
+    await expect(child).toHaveCount(0);
+    await discovery.locator('.tree-toggle').click();
+    await expect(child).toBeVisible();
   });
 });

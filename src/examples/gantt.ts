@@ -7,7 +7,7 @@
  * editor flows are intentionally left out.
  */
 import type { ColumnRegular } from '@revolist/revogrid';
-import { TooltipPlugin, TreeDataPlugin } from '@revolist/revogrid-pro';
+import { TooltipPlugin } from '@revolist/revogrid-pro';
 import { GanttPanelResizePlugin, GanttPlugin, defineGanttToolbar } from '@revolist/gantt';
 import { createGrid, percentType } from '../shared/grid';
 import { createPanelScaffold } from '../shared/ui';
@@ -37,7 +37,9 @@ export function mountGanttExample(parent: HTMLElement, title: string, descriptio
   grid.columnTypes = {
     percent: percentType,
   };
-  grid.plugins = [TreeDataPlugin, GanttPanelResizePlugin, TooltipPlugin, GanttPlugin] as never;
+  // Gantt installs its structural TreeDataPlugin; registering another trial
+  // bundle's class here would compose the tree controls twice.
+  grid.plugins = [GanttPanelResizePlugin, TooltipPlugin, GanttPlugin] as never;
   Object.assign(grid, {
     gantt: project.config,
     ganttDependencies: project.dependencies,

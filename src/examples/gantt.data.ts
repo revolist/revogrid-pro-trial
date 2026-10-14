@@ -125,7 +125,7 @@ function task(
   startDate: ISODateString,
   endDate: ISODateString,
   durationDays: number,
-  progressPercent: number,
+  percentDone: number,
 ): GanttTaskSourceRow {
   return {
     id,
@@ -138,7 +138,7 @@ function task(
     startDate,
     endDate,
     duration: durationDays,
-    progressPercent,
+    percentDone,
     calendarId,
     isCritical: false,
     tags: [],
