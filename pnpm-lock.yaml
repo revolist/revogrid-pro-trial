@@ -12,20 +12,20 @@ importers:
   .:
     dependencies:
       '@revolist/gantt':
-        specifier: npm:@revolist/gantt-trial@3.0.0
-        version: '@revolist/gantt-trial@3.0.0'
+        specifier: npm:@revolist/gantt-trial@3.0.6
+        version: '@revolist/gantt-trial@3.0.6'
       '@revolist/pivot':
-        specifier: npm:@revolist/pivot-trial@3.0.0
-        version: '@revolist/pivot-trial@3.0.0'
+        specifier: npm:@revolist/pivot-trial@3.0.6
+        version: '@revolist/pivot-trial@3.0.6'
       '@revolist/revogrid':
         specifier: 4.29.0
         version: 4.29.0
       '@revolist/revogrid-pro':
-        specifier: npm:@revolist/rv-pro-trial@3.0.0
-        version: '@revolist/rv-pro-trial@3.0.0'
+        specifier: npm:@revolist/rv-pro-trial@3.0.6
+        version: '@revolist/rv-pro-trial@3.0.6'
       '@revolist/scheduler':
-        specifier: npm:@revolist/scheduler-trial@3.0.0
-        version: '@revolist/scheduler-trial@3.0.0'
+        specifier: npm:@revolist/scheduler-trial@3.0.6
+        version: '@revolist/scheduler-trial@3.0.6'
     devDependencies:
       '@playwright/test':
         specifier: 1.62.1
@@ -35,7 +35,7 @@ importers:
         version: 5.8.3
       vite:
         specifier: 8.2.1
-        version: 8.2.1
+        version: 8.2.1(@types/node@26.6.5)
 
 packages:
 
@@ -55,14 +55,14 @@ packages:
     engines: {node: '>=20'}
     hasBin: true
 
-  '@revolist/charts-trial@3.0.0':
-    resolution: {integrity: sha512-Mm4yfe/qg66VvKRdBUSjHpGSbeXHsbbgLZjOfXWKA2gFN/ZrQm56MiZeVq+NOWv+ew11rnXWF7a3g5lrk1W1Tg==, tarball: https://trial.rv-grid.com/@revolist/charts-trial/-/4b4daa3685f10cffe2ba5d447f58fd9982791d2f}
+  '@revolist/charts-trial@3.0.6':
+    resolution: {integrity: sha512-k6ERMIB964rskoyU/RZzl3eD0YLhCyOZYvbRoaSjCXKA6cQwXna6d/fDATeUQAGWdIt51U8aOtNPpwthetdyhQ==, tarball: https://trial.rv-grid.com/@revolist/charts-trial/-/a0af5f428e7f3a3884f8c30cbfec935bdecadd8a}
 
-  '@revolist/gantt-trial@3.0.0':
-    resolution: {integrity: sha512-iEfndrKCiRMdkuxR4UlSleRVrB+iFZ7KVhyf/HA2ghvSR0wt0wo1KZeWqWIAQV/IiLzksktldbJ16Edf/b694g==, tarball: https://trial.rv-grid.com/@revolist/gantt-trial/-/d7eb4d07a26f4287e7b05988652edc8deb00ea35}
+  '@revolist/gantt-trial@3.0.6':
+    resolution: {integrity: sha512-8VevHvtE9Bjbx8P0yZPQ3EJ+v7IniH2qRYpod7M7WFirbeEPjOkFueAXHo/Fgm/k73SM5lVf+ToMyu7zBskvzA==, tarball: https://trial.rv-grid.com/@revolist/gantt-trial/-/127a8d72de02f46afedec5ff53bdb6619cae30ba}
 
-  '@revolist/pivot-trial@3.0.0':
-    resolution: {integrity: sha512-rG73JCNdAIDhDGs+6I2fh3+zEGuj5id8dd0YVVpHzlS2DjUvoeJmDUXSSu1qoh4V2LOmzmu2bgc2O65AWnsIXw==, tarball: https://trial.rv-grid.com/@revolist/pivot-trial/-/6852d51d36fea8138987dbfd784dc9b195587d06}
+  '@revolist/pivot-trial@3.0.6':
+    resolution: {integrity: sha512-v09tiuK8K3zMNxrJ1T8Fymx//j+JlJQbpE8TwzJaPySw0Sml2xExv5184V5GYRYzHumrdsOJLzqYrX+Zjv0q0A==, tarball: https://trial.rv-grid.com/@revolist/pivot-trial/-/60dc40c9b2f1148f14627d9bd5c331144f864ccf}
 
   '@revolist/revo-dropdown@3.0.12':
     resolution: {integrity: sha512-fZqkde1fL7NeCaQSbpv4G2wMvD3HV73xklcsGV4AUUJv0bC8h0UEBrud+08PP4DVOumtJ7euhQjIOxznQMK+9A==}
@@ -76,11 +76,11 @@ packages:
   '@revolist/revogrid@4.29.0':
     resolution: {integrity: sha512-LpnIXaOd4/UVcNK9ZRAIgXP1f+mkGwFCPu6Fii/pGrlqa+QqRNN4r51Iwe+4KAG913SSjutgkHqBURRphtRO2Q==}
 
-  '@revolist/rv-pro-trial@3.0.0':
-    resolution: {integrity: sha512-WKUugugnh9dXMPwDsYaVqMF9ll2Jaiqfs8iQ6WBHxe1Ie91EJ/ahJ7ok93tha8vlmROMcK9Zm3dpwyDChampHA==, tarball: https://trial.rv-grid.com/@revolist/rv-pro-trial/-/cbd53bd3f0206e3679375775aa2c5b1b20c3f194}
+  '@revolist/rv-pro-trial@3.0.6':
+    resolution: {integrity: sha512-GfaG2nrHYCMJMVKkgFA6KYjFqB0W7YPwLvJp4KDUPi/bEuexZ7PNL8doxjV6shCA+d2U93W35alZkZulKaHUvw==, tarball: https://trial.rv-grid.com/@revolist/rv-pro-trial/-/fc7f506b52fc67de5d270f80c750c5bcc3099499}
 
-  '@revolist/scheduler-trial@3.0.0':
-    resolution: {integrity: sha512-1VJzBo3u3/ECakGulzFRua2El/6FmiEMbVeKai/IYdmcuCiaMneZcnmwg0P+2uA0vqWGlBLWTauo1l5w1H4QpQ==, tarball: https://trial.rv-grid.com/@revolist/scheduler-trial/-/7b3d801adee7d926c8475fbba322ba85dd0cddac}
+  '@revolist/scheduler-trial@3.0.6':
+    resolution: {integrity: sha512-HJD0Gb9zrp5Ltkup/10DKYovoLQuxDEL/SkGf2vl+a9+gALxhDQkMPrAv8TBAOO7Ie49mR3b5qmPocHLIyKI/w==, tarball: https://trial.rv-grid.com/@revolist/scheduler-trial/-/3531467c529040c5478130399bd115efd9144d42}
 
   '@rolldown/binding-android-arm64@1.2.3':
     resolution: {integrity: sha512-zrJtHDcaZJ1Fp7xf4hNl+7seH9Cn/N5TwLYkhgXREtBwAd/jaqW3uqeHxpDugJLVICWg4eW44kOQEGJ1r6jCGw==}
@@ -214,13 +214,38 @@ packages:
     engines: {node: '>=16.0.0', npm: '>=7.10.0'}
     hasBin: true
 
+  '@types/node@26.6.5':
+    resolution: {integrity: sha512-uMzsv9stDdofIZBx4UGh4Z9ZgXnGC9seRDscilBcTHAeOFk67MZg/k9bWVfO+bk4qZmG+l52hRnLwUiH2LnJTg==}
+
+  '@types/whatwg-mimetype@3.0.2':
+    resolution: {integrity: sha512-c2AKvDT8ToxLIOUlN51gTiHXflsfIFisS4pO7pDPoKouJCESkhZnEy623gwP9laCy5lnLDAw1vAzu2vM2YLOrA==}
+
+  '@types/ws@8.18.2':
+    resolution: {integrity: sha512-67MQl+fpWKVTT1NYdnmo3U4sc/xPo/zQBncVnI74qmQa0z/b+1g6iYqNmGCPbxO+zz2aklb08a0oHfegiVd0/w==}
+
   bessel@1.0.2:
     resolution: {integrity: sha512-Al3nHGQGqDYqqinXhQzmwmcRToe/3WyBv4N8aZc5Pef8xw2neZlR9VPi84Sa23JtgWcucu18HxVZrnI0fn2etw==}
     engines: {node: '>=0.8'}
 
+  buffer-image-size@0.6.4:
+    resolution: {integrity: sha512-nEh+kZOPY1w+gcCMobZ6ETUp9WfibndnosbpwB1iJk/8Gt5ZF2bhS6+B6bPYz424KtwsR6Rflc3tCz1/ghX2dQ==}
+    engines: {node: '>=4.0'}
+
+  d3-path@3.1.0:
+    resolution: {integrity: sha512-p3KP5HCf/bvjBSSKuXid6Zqijx7wIfNW+J/maPs+iwR35at5JCbLUT0LzF1cnjbCHWhqzQTIN2Jpe8pRebIEFQ==}
+    engines: {node: '>=12'}
+
+  d3-shape@3.2.0:
+    resolution: {integrity: sha512-SaLBuwGm3MOViRq2ABk3eLoxwZELpH6zhl3FbAoJ7Vm1gofKx6El1Ib5z23NUEhF9AsGl7y+dzLe5Cw2AArGTA==}
+    engines: {node: '>=12'}
+
   detect-libc@2.1.2:
     resolution: {integrity: sha512-Btj2BOOO83o3WyH59e8MgXsxEQVcarkUOpEYrubB0urwnN10yQ364rsiByU11nZlqWYZm05i/of7io4mzihBtQ==}
     engines: {node: '>=8'}
+
+  entities@7.0.1:
+    resolution: {integrity: sha512-TWrgLOFUQTH994YUyl1yT4uyavY5nNB5muff+RtWaqNVCAK408b5ZnnbNAUEWLTCpum9w6arT70i1XdQ4UeOPA==}
+    engines: {node: '>=0.12'}
 
   fdir@6.5.0:
     resolution: {integrity: sha512-tIbYtZbucOs0BRGqPJkshJUYdL+SDH7dVM8gjy+ERp3WAUjLEFJE+02kanyHtwjWOnwrKYBiwAmM0p4kLJAnXg==}
@@ -246,6 +271,10 @@ packages:
     resolution: {integrity: sha512-5xoDfX+fL7faATnagmWPpbFtwh/R77WmMMqqHGS65C3vvB0YHrgF+B1YmZ3441tMj5n63k0212XNoJwzlhffQw==}
     engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
     os: [darwin]
+
+  happy-dom@20.14.6:
+    resolution: {integrity: sha512-5DDsf4QmEIlRL6NkCv/fxSjYHHkZceL/IaYQdJc2h3G7DRTEai++VTjbfL0LB9geW2VrA3+vrjF3Efx+OTtX0Q==}
+    engines: {node: '>=20.0.0'}
 
   jstat@1.9.6:
     resolution: {integrity: sha512-rPBkJbK2TnA8pzs93QcDDPlKcrtZWuuCo2dVR0TFLOJSxhqfWOVCSp8aV3/oSbn+4uY4yw1URtLpHQedtmXfug==}
@@ -364,6 +393,9 @@ packages:
     engines: {node: '>=14.17'}
     hasBin: true
 
+  undici-types@8.9.0:
+    resolution: {integrity: sha512-KTDyRTYX8sWmKXAikPHHSyc63CRPETMctyjKFupcC6OBLXT3xsN0e9aF7m+mIXutFWpUXuedtowG7iLOzp0kQg==}
+
   vite@8.2.1:
     resolution: {integrity: sha512-EU/eS7BH3XROHh2YnBefjM6DBKA6ZeMZEYQbj7NLWg5wHYlhB8B/Mayd5XsgWq+NFYccDOTemRpdETWR6Ka/lw==}
     engines: {node: ^20.19.0 || >=22.12.0}
@@ -407,9 +439,25 @@ packages:
       yaml:
         optional: true
 
+  whatwg-mimetype@3.0.0:
+    resolution: {integrity: sha512-nt+N2dzIutVRxARx1nghPKGv1xHikU7HKdfafKkLNLindmPU/ch3U31NOCGGA/dmPcmb1VlofO0vnKAcsm0o/Q==}
+    engines: {node: '>=12'}
+
   write-excel-file@4.1.1:
     resolution: {integrity: sha512-MUnCnNtQrcZek832ZcU24uU0rSphFmKPD1DvIjXOlygVb93CV7Tme6H3jUTkxsMmjB2W7HIzERzjqTi5kui71A==}
     engines: {node: '>=18'}
+
+  ws@8.22.0:
+    resolution: {integrity: sha512-Ydggc987+RO0AnWtZ/7Wq9FtNvcrL1b/RO0ud9mWjUPgDrsAAwQSF51sm2hm1XofbU/4jkpGEsLFsZZxU+1DOg==}
+    engines: {node: '>=10.0.0'}
+    peerDependencies:
+      bufferutil: ^4.0.1
+      utf-8-validate: '>=5.0.2'
+    peerDependenciesMeta:
+      bufferutil:
+        optional: true
+      utf-8-validate:
+        optional: true
 
 snapshots:
 
@@ -426,25 +474,33 @@ snapshots:
     dependencies:
       playwright: 1.62.1
 
-  '@revolist/charts-trial@3.0.0':
+  '@revolist/charts-trial@3.0.6':
     dependencies:
+      d3-shape: 3.2.0
       fflate: 0.8.2
+      happy-dom: 20.14.6
+    transitivePeerDependencies:
+      - bufferutil
+      - utf-8-validate
 
-  '@revolist/gantt-trial@3.0.0':
+  '@revolist/gantt-trial@3.0.6':
     dependencies:
       '@fortawesome/fontawesome-free': 7.3.1
       '@revolist/revogrid': 4.29.0
       '@revolist/revogrid-column-date': 2.0.27
       '@revolist/revogrid-column-select': 3.2.4
-      '@revolist/rv-pro-trial': 3.0.0
+      '@revolist/rv-pro-trial': 3.0.6
 
-  '@revolist/pivot-trial@3.0.0':
+  '@revolist/pivot-trial@3.0.6':
     dependencies:
       '@fortawesome/fontawesome-free': 7.3.1
-      '@revolist/charts-trial': 3.0.0
+      '@revolist/charts-trial': 3.0.6
       '@revolist/revogrid': 4.29.0
-      '@revolist/rv-pro-trial': 3.0.0
+      '@revolist/rv-pro-trial': 3.0.6
       fflate: 0.8.2
+    transitivePeerDependencies:
+      - bufferutil
+      - utf-8-validate
 
   '@revolist/revo-dropdown@3.0.12': {}
 
@@ -457,17 +513,17 @@ snapshots:
 
   '@revolist/revogrid@4.29.0': {}
 
-  '@revolist/rv-pro-trial@3.0.0':
+  '@revolist/rv-pro-trial@3.0.6':
     dependencies:
       '@formulajs/formulajs': 4.6.1
       '@revolist/revogrid': 4.29.0
       write-excel-file: 4.1.1
 
-  '@revolist/scheduler-trial@3.0.0':
+  '@revolist/scheduler-trial@3.0.6':
     dependencies:
       '@fortawesome/fontawesome-free': 7.3.1
       '@revolist/revogrid': 4.29.0
-      '@revolist/rv-pro-trial': 3.0.0
+      '@revolist/rv-pro-trial': 3.0.6
 
   '@rolldown/binding-android-arm64@1.2.3':
     optional: true
@@ -548,9 +604,31 @@ snapshots:
       '@rollup/rollup-win32-arm64-msvc': 4.44.0
       '@rollup/rollup-win32-x64-msvc': 4.44.0
 
+  '@types/node@26.6.5':
+    dependencies:
+      undici-types: 8.9.0
+
+  '@types/whatwg-mimetype@3.0.2': {}
+
+  '@types/ws@8.18.2':
+    dependencies:
+      '@types/node': 26.6.5
+
   bessel@1.0.2: {}
 
+  buffer-image-size@0.6.4:
+    dependencies:
+      '@types/node': 26.6.5
+
+  d3-path@3.1.0: {}
+
+  d3-shape@3.2.0:
+    dependencies:
+      d3-path: 3.1.0
+
   detect-libc@2.1.2: {}
+
+  entities@7.0.1: {}
 
   fdir@6.5.0(picomatch@4.0.5):
     optionalDependencies:
@@ -565,6 +643,19 @@ snapshots:
 
   fsevents@2.3.3:
     optional: true
+
+  happy-dom@20.14.6:
+    dependencies:
+      '@types/node': 26.6.5
+      '@types/whatwg-mimetype': 3.0.2
+      '@types/ws': 8.18.2
+      buffer-image-size: 0.6.4
+      entities: 7.0.1
+      whatwg-mimetype: 3.0.0
+      ws: 8.22.0
+    transitivePeerDependencies:
+      - bufferutil
+      - utf-8-validate
 
   jstat@1.9.6: {}
 
@@ -666,7 +757,9 @@ snapshots:
 
   typescript@5.8.3: {}
 
-  vite@8.2.1:
+  undici-types@8.9.0: {}
+
+  vite@8.2.1(@types/node@26.6.5):
     dependencies:
       lightningcss: 1.33.0
       picomatch: 4.0.5
@@ -674,8 +767,13 @@ snapshots:
       rolldown: 1.2.3
       tinyglobby: 0.2.17
     optionalDependencies:
+      '@types/node': 26.6.5
       fsevents: 2.3.3
+
+  whatwg-mimetype@3.0.0: {}
 
   write-excel-file@4.1.1:
     dependencies:
       fflate: 0.8.3
+
+  ws@8.22.0: {}
