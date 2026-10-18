@@ -8,6 +8,27 @@
 import { expect, test } from '@playwright/test';
 
 test.describe('RevoGrid Pro trial examples', () => {
+  for (const viewport of [{ width: 1440, height: 900 }, { width: 1280, height: 600 }, { width: 390, height: 844 }]) {
+    test(`keeps every example inside the viewport at ${viewport.width}x${viewport.height}`, async ({ page }) => {
+      await page.setViewportSize(viewport);
+      await page.goto('/');
+
+      for (const name of ['Tree', 'Pivot', 'Gantt', 'Scheduler']) {
+        await page.getByRole('tab', { name, exact: true }).click();
+        await expect(page.locator('revo-grid[theme="material"]')).toBeVisible();
+        await expect.poll(() => page.evaluate(() => {
+          const frame = document.querySelector('.app-frame')!.getBoundingClientRect();
+          const host = document.querySelector('.grid-host')!.getBoundingClientRect();
+          return document.documentElement.scrollHeight <= window.innerHeight
+            && document.body.scrollHeight <= window.innerHeight
+            && frame.bottom <= window.innerHeight
+            && host.bottom <= frame.bottom
+            && host.height > 0;
+        }), { message: `${name} should fit without body scrolling` }).toBe(true);
+      }
+    });
+  }
+
   test('starts on the Tree example and renders a grid', async ({ page }) => {
     await page.goto('/');
 
