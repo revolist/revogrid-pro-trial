@@ -18,11 +18,11 @@
   "license": "ISC",
   "description": "RevoGrid Pro Trial",
   "dependencies": {
-    "@revolist/gantt": "npm:@revolist/gantt-trial@3.0.12",
-    "@revolist/pivot": "npm:@revolist/pivot-trial@3.0.12",
-    "@revolist/revogrid": "4.29.0",
-    "@revolist/revogrid-pro": "npm:@revolist/rv-pro-trial@3.0.12",
-    "@revolist/scheduler": "npm:@revolist/scheduler-trial@3.0.12"
+    "@revolist/gantt": "npm:@revolist/gantt-trial@3.0.14",
+    "@revolist/pivot": "npm:@revolist/pivot-trial@3.0.14",
+    "@revolist/revogrid": "4.29.1",
+    "@revolist/revogrid-pro": "npm:@revolist/rv-pro-trial@3.0.14",
+    "@revolist/scheduler": "npm:@revolist/scheduler-trial@3.0.14"
   },
   "devDependencies": {
     "@playwright/test": "1.62.1",
@@ -31,7 +31,7 @@
   },
   "pnpm": {
     "overrides": {
-      "@revolist/revogrid": "4.29.0"
+      "@revolist/revogrid": "4.29.1"
     }
   }
 }
