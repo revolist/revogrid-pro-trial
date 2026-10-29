@@ -1,3 +1,5 @@
+import { controlAttributes, createControl } from '@revolist/ui';
+import '@revolist/ui/styles.css';
 /**
  * Application entry point for the RevoGrid Pro Trial examples.
  *
@@ -33,7 +35,7 @@ app.innerHTML = `
           <p class="eyebrow">RevoGrid Pro Trial</p>
           <h1>Examples</h1>
         </div>
-        <nav class="example-switch" aria-label="Example switch"></nav>
+        <nav class="example-switch rv-segmented-switch" aria-label="Example switch"></nav>
       </header>
       <main class="app-main">
         <section class="example-panel" id="example-panel"></section>
@@ -54,9 +56,9 @@ const panelEl = panel;
 let cleanup: MountCleanup | undefined;
 
 examples.forEach((example) => {
-  const button = document.createElement('button');
+  const button = createControl(document, 'button', { type: 'button' });
   button.type = 'button';
-  button.className = 'switch-button';
+  button.className = controlAttributes('button', { class: 'switch-button' }).class;
   button.textContent = example.label;
   button.dataset.example = example.id;
   button.setAttribute('role', 'tab');
@@ -83,7 +85,7 @@ function setActiveExample(id: ExampleId) {
   }
 
   switcherEl.querySelectorAll<HTMLButtonElement>('.switch-button').forEach((button) => {
-    button.setAttribute('aria-selected', String(button.dataset.example === example.id));
+    button.classList.add('rv-segmented-switch-item'); button.setAttribute('aria-selected', String(button.dataset.example === example.id)); button.classList.toggle('on', button.getAttribute('aria-selected') === 'true');
   });
 
   cleanup?.();
