@@ -12,20 +12,20 @@ importers:
   .:
     dependencies:
       '@revolist/gantt':
-        specifier: npm:@revolist/gantt-trial@3.0.17
-        version: '@revolist/gantt-trial@3.0.17'
+        specifier: npm:@revolist/gantt-trial@3.0.18
+        version: '@revolist/gantt-trial@3.0.18'
       '@revolist/pivot':
-        specifier: npm:@revolist/pivot-trial@3.0.17
-        version: '@revolist/pivot-trial@3.0.17'
+        specifier: npm:@revolist/pivot-trial@3.0.18
+        version: '@revolist/pivot-trial@3.0.18'
       '@revolist/revogrid':
         specifier: 4.29.1
         version: 4.29.1
       '@revolist/revogrid-pro':
-        specifier: npm:@revolist/rv-pro-trial@3.0.17
-        version: '@revolist/rv-pro-trial@3.0.17'
+        specifier: npm:@revolist/rv-pro-trial@3.0.18
+        version: '@revolist/rv-pro-trial@3.0.18'
       '@revolist/scheduler':
-        specifier: npm:@revolist/scheduler-trial@3.0.17
-        version: '@revolist/scheduler-trial@3.0.17'
+        specifier: npm:@revolist/scheduler-trial@3.0.18
+        version: '@revolist/scheduler-trial@3.0.18'
     devDependencies:
       '@playwright/test':
         specifier: 1.62.1
@@ -63,14 +63,14 @@ packages:
     engines: {node: '>=20'}
     hasBin: true
 
-  '@revolist/charts-trial@3.0.17':
-    resolution: {integrity: sha512-RmZjBfxoRhNZAhc43lprJlfej5U/RmKFyZQaRCbr35TIgSwKzJrRVP3/Rxl5g23tH9d9NYsAEHPfoXYinaTung==, tarball: https://trial.rv-grid.com/@revolist/charts-trial/-/ded2e6bdb18088f1b384c1fc528dc8a15eb3f774}
+  '@revolist/charts-trial@3.0.18':
+    resolution: {integrity: sha512-B5y7ztPOQAneiqMnby4V4RjG0zzltqQ1Qtahb35Q///ypU3kbhY4awkm2DQ3gGmxOm5q7vZ6BBKIt6vdw0RZtw==, tarball: https://trial.rv-grid.com/@revolist/charts-trial/-/0ee44bfc3ac6b401fba6e9107df33638d18f3278}
 
-  '@revolist/gantt-trial@3.0.17':
-    resolution: {integrity: sha512-OEjN63wvrKl/KZ4i3h5E6C2fuO7O6LE9EshWJT7Hr/aXpBw7Y9QoMmxqueSpyrtjc3GvRpcIB3D+g8gcnbP+Vg==, tarball: https://trial.rv-grid.com/@revolist/gantt-trial/-/71ec42a7c331628eca8116dff828d2bc9de8d06d}
+  '@revolist/gantt-trial@3.0.18':
+    resolution: {integrity: sha512-Uo1pZQixrRbAXuSH5yvyeoouwDungKra7rNRxv2CRkT1CAVzoaG4+8L3SEf5Uyeh91eIK9bM8o8vEM5UkQiZyA==, tarball: https://trial.rv-grid.com/@revolist/gantt-trial/-/5cc41444b093b4003cae0aa99bd64424842a167d}
 
-  '@revolist/pivot-trial@3.0.17':
-    resolution: {integrity: sha512-TJBSQPHCdp72dMbInvzLMXLRQtqhBhx/oeLFt4LX8IreSPfD/4mgwUZa9ROgUJXGbM0gp1g+U9cdoWrIOgEj2A==, tarball: https://trial.rv-grid.com/@revolist/pivot-trial/-/aae691128d95c913c9c3e788235b7c54d10246de}
+  '@revolist/pivot-trial@3.0.18':
+    resolution: {integrity: sha512-vrl1ZC0PijkbBPKJ5hrCBJ2bRQoiSwqVIpDJmgYu+0lBj9JNlx8CZI3DepgqPccwhqPY5nun9+AHIO3FdJ+nKg==, tarball: https://trial.rv-grid.com/@revolist/pivot-trial/-/82feedc677a8cdfffa09e6df3a3d28e878de7664}
 
   '@revolist/revo-dropdown@3.0.12':
     resolution: {integrity: sha512-fZqkde1fL7NeCaQSbpv4G2wMvD3HV73xklcsGV4AUUJv0bC8h0UEBrud+08PP4DVOumtJ7euhQjIOxznQMK+9A==}
@@ -84,11 +84,11 @@ packages:
   '@revolist/revogrid@4.29.1':
     resolution: {integrity: sha512-j/m52cS6ev4aOpskj2lxIc+vP1gxNFGJ1K3hrp6vM1lw/JJctQN4iEgr+8qhzkEVrmd5VoAa163SVB00mR4c2Q==}
 
-  '@revolist/rv-pro-trial@3.0.17':
-    resolution: {integrity: sha512-BvUVSfc19bRkrm5jplG5CR8P8ZnIoToLDZNoRHDOpQTXDj+x5f4+Tr7F03a2feUcmI6y1j0iWBAUk3vyEoI+fA==, tarball: https://trial.rv-grid.com/@revolist/rv-pro-trial/-/d7025bf3170d5b9a69a86ff985cc4e68493e6a6d}
+  '@revolist/rv-pro-trial@3.0.18':
+    resolution: {integrity: sha512-cG2ucLzg6p6rjE/43JrndxIrrms3V/c2Hvg5FR3dOsPeNAV/LguTJTLc2wmLlKkSWV2b4/PifN4Iuf+4Iv4hAg==, tarball: https://trial.rv-grid.com/@revolist/rv-pro-trial/-/163baae10440b72fe5dcfe0ff359b856c34399aa}
 
-  '@revolist/scheduler-trial@3.0.17':
-    resolution: {integrity: sha512-LQZ85pquk+M2EKfpugpQTT7Yvan5omlK2c497p4LVCTTx/6Dyri3MxIiVTqtjk/wwGo20XeWEewHA3BYdhSI/A==, tarball: https://trial.rv-grid.com/@revolist/scheduler-trial/-/d310220def64cb503a54a57eb72e2d9a3029b68e}
+  '@revolist/scheduler-trial@3.0.18':
+    resolution: {integrity: sha512-k/zf0dVeSt0yhAJExfIkKxhSPFzKbyWeiu4WZk8buUCqFN0YL6iGuOLyA+qa4tGRLxWQYlb/lx1Pw7lQlQ7h/A==, tarball: https://trial.rv-grid.com/@revolist/scheduler-trial/-/7615abfab2cdda20dd61b1e78b0a6f729fd92274}
 
   '@rolldown/binding-android-arm64@1.2.3':
     resolution: {integrity: sha512-zrJtHDcaZJ1Fp7xf4hNl+7seH9Cn/N5TwLYkhgXREtBwAd/jaqW3uqeHxpDugJLVICWg4eW44kOQEGJ1r6jCGw==}
@@ -565,7 +565,7 @@ snapshots:
     dependencies:
       playwright: 1.62.1
 
-  '@revolist/charts-trial@3.0.17':
+  '@revolist/charts-trial@3.0.18':
     dependencies:
       d3-shape: 3.2.0
       fflate: 0.8.3
@@ -574,22 +574,22 @@ snapshots:
       - bufferutil
       - utf-8-validate
 
-  '@revolist/gantt-trial@3.0.17':
+  '@revolist/gantt-trial@3.0.18':
     dependencies:
       '@fortawesome/fontawesome-free': 7.3.1
       '@revolist/revogrid': 4.29.1
       '@revolist/revogrid-column-date': 2.0.27
       '@revolist/revogrid-column-select': 3.2.4
-      '@revolist/rv-pro-trial': 3.0.17
+      '@revolist/rv-pro-trial': 3.0.18
     transitivePeerDependencies:
       - preact-render-to-string
 
-  '@revolist/pivot-trial@3.0.17':
+  '@revolist/pivot-trial@3.0.18':
     dependencies:
       '@fortawesome/fontawesome-free': 7.3.1
-      '@revolist/charts-trial': 3.0.17
+      '@revolist/charts-trial': 3.0.18
       '@revolist/revogrid': 4.29.1
-      '@revolist/rv-pro-trial': 3.0.17
+      '@revolist/rv-pro-trial': 3.0.18
       fflate: 0.8.3
       preact: 10.29.8
     transitivePeerDependencies:
@@ -608,7 +608,7 @@ snapshots:
 
   '@revolist/revogrid@4.29.1': {}
 
-  '@revolist/rv-pro-trial@3.0.17':
+  '@revolist/rv-pro-trial@3.0.18':
     dependencies:
       '@formulajs/formulajs': 4.6.1
       '@revolist/revogrid': 4.29.1
@@ -617,11 +617,11 @@ snapshots:
     transitivePeerDependencies:
       - preact-render-to-string
 
-  '@revolist/scheduler-trial@3.0.17':
+  '@revolist/scheduler-trial@3.0.18':
     dependencies:
       '@fortawesome/fontawesome-free': 7.3.1
       '@revolist/revogrid': 4.29.1
-      '@revolist/rv-pro-trial': 3.0.17
+      '@revolist/rv-pro-trial': 3.0.18
       pdfmake: 0.3.9
     transitivePeerDependencies:
       - preact-render-to-string
