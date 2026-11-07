@@ -1,3 +1,5 @@
+import { controlAttributes, createControl } from '@revolist/ui';
+import '@revolist/ui/styles.css';
 /**
  * Small DOM helpers used by the plain TypeScript examples.
  *
@@ -44,9 +46,9 @@ export function createPanelScaffold(parent: HTMLElement, title: string, descript
  * Create a styled command button for example toolbars.
  */
 export function createActionButton(label: string) {
-  const button = document.createElement('button');
+  const button = createControl(document, 'button', { type: 'button' });
   button.type = 'button';
-  button.className = 'action-button';
+  button.className = controlAttributes('button', { class: 'action-button' }).class;
   button.textContent = label;
   return button;
 }
@@ -58,7 +60,7 @@ export function createToggle(labelText: string) {
   const label = document.createElement('label');
   label.className = 'toggle-label';
 
-  const input = document.createElement('input');
+  const input = createControl(document, 'input', { type: 'checkbox' });
   input.type = 'checkbox';
 
   const text = document.createElement('span');

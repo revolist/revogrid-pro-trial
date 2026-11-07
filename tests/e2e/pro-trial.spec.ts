@@ -16,6 +16,14 @@ test.describe('RevoGrid Pro trial examples', () => {
       for (const name of ['Tree', 'Pivot', 'Gantt', 'Scheduler']) {
         await page.getByRole('tab', { name, exact: true }).click();
         await expect(page.locator('revo-grid[theme="material"]')).toBeVisible();
+        await expect.poll(() => page.getByRole('navigation', { name: 'Example switch' }).evaluate((navigation) => {
+          const bounds = navigation.getBoundingClientRect();
+          return [...navigation.querySelectorAll('[role="tab"]')].every((tab) => {
+            const rect = tab.getBoundingClientRect();
+            return rect.top >= bounds.top && rect.bottom <= bounds.bottom
+              && rect.left >= bounds.left && rect.right <= bounds.right;
+          });
+        }), { message: 'Every example tab should fit inside the switch' }).toBe(true);
         await expect.poll(() => page.evaluate(() => {
           const frame = document.querySelector('.app-frame')!.getBoundingClientRect();
           const host = document.querySelector('.grid-host')!.getBoundingClientRect();
@@ -117,7 +125,8 @@ test.describe('RevoGrid Pro trial examples', () => {
 
   test('shows authored progress in the Gantt Done column', async ({ page }) => {
     await page.goto('/#gantt');
-    await page.getByRole('combobox').click();
+    await page.getByRole('button', { name: 'View', exact: true }).click();
+    await page.getByRole('dialog', { name: 'Gantt view settings' }).locator('summary').filter({ hasText: 'Columns' }).click();
     for (const name of ['WBS', 'Status', 'Start', 'Finish']) {
       await page.getByRole('option', { name, exact: true }).click();
     }
