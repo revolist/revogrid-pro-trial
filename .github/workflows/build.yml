@@ -8,6 +8,9 @@ on:
 permissions:
   contents: read
 
+env:
+  npm_config_user_agent: 'rv-grid-ci/1 rv-grid-statistics-exclude/1'
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -20,3 +23,27 @@ jobs:
           cache: pnpm
       - run: pnpm install --frozen-lockfile
       - run: pnpm build
+
+  npm-build:
+    name: Clean npm install (${{ matrix.user-config }})
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        user-config: [empty, unrelated]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - name: Isolate npm user settings
+        run: |
+          NPM_USER_CONFIG="$RUNNER_TEMP/trial-smoke.npmrc"
+          touch "$NPM_USER_CONFIG"
+          echo "NPM_CONFIG_USERCONFIG=$NPM_USER_CONFIG" >> "$GITHUB_ENV"
+      - name: Create unrelated user settings
+        if: matrix.user-config == 'unrelated'
+        run: |
+          npm config set registry=https://registry.npmjs.org --location=user
+          npm config set fund=false --location=user
+      - run: npm install
+      - run: npm run build

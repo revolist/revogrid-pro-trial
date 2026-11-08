@@ -20,7 +20,7 @@
   "dependencies": {
     "@revolist/gantt": "npm:@revolist/gantt-trial@4.0.1",
     "@revolist/pivot": "npm:@revolist/pivot-trial@4.0.1",
-    "@revolist/revogrid": "4.29.1",
+    "@revolist/revogrid": "4.31.4",
     "@revolist/revogrid-pro": "npm:@revolist/rv-pro-trial@4.0.1",
     "@revolist/scheduler": "npm:@revolist/scheduler-trial@4.0.1",
     "@revolist/ui": "4.0.1",
@@ -33,7 +33,10 @@
   },
   "pnpm": {
     "overrides": {
-      "@revolist/revogrid": "4.29.1"
+      "@revolist/revogrid": "4.31.4"
     }
+  },
+  "overrides": {
+    "@revolist/revogrid": "$@revolist/revogrid"
   }
 }
