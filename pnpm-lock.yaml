@@ -5,7 +5,7 @@ settings:
   excludeLinksFromLockfile: false
 
 overrides:
-  '@revolist/revogrid': 4.31.4
+  '@revolist/revogrid': 4.31.5
 
 importers:
 
@@ -18,8 +18,8 @@ importers:
         specifier: npm:@revolist/pivot-trial@4.0.9
         version: '@revolist/pivot-trial@4.0.9'
       '@revolist/revogrid':
-        specifier: 4.31.4
-        version: 4.31.4
+        specifier: 4.31.5
+        version: 4.31.5
       '@revolist/revogrid-pro':
         specifier: npm:@revolist/rv-pro-trial@4.0.9
         version: '@revolist/rv-pro-trial@4.0.9'
@@ -72,7 +72,7 @@ packages:
   '@revolist/charts-trial@4.0.9':
     resolution: {integrity: sha512-rCXzp1jZIUPqG1HuvwKhaqdhh+ycfFRi3NCju4sC9iWRlPjhb5vQ2z93ISf2NlSTTA3hSz/33EMdGqdcC3Knmw==, tarball: https://trial.rv-grid.com/@revolist/charts-trial/-/0851d6dc9ab9de1badbc7a3065e85da9441b1c29}
     peerDependencies:
-      '@revolist/revogrid': 4.31.4
+      '@revolist/revogrid': 4.31.5
 
   '@revolist/gantt-trial@4.0.9':
     resolution: {integrity: sha512-Iy4fpfhWLYxn5CMz6J1z57wddTU96E+KfT/ZIo1bW4VDGr2Z8XAsFje0Ed2EmIEjIOFR5FrSR0jRr68bMapSFg==, tarball: https://trial.rv-grid.com/@revolist/gantt-trial/-/a9f21d3094a6d290e4922c51ff7b6ee96ded628f}
@@ -89,8 +89,8 @@ packages:
   '@revolist/revogrid-column-select@3.2.4':
     resolution: {integrity: sha512-EIaqMiv6YBMTY+p5N0p3MVF1YSnnbky1siMIeWkxwhJ0+YXbiQtlYBLYvLQ5LZGPee93e/z/5XHfJrsBf9c0Vg==}
 
-  '@revolist/revogrid@4.31.4':
-    resolution: {integrity: sha512-qOStHkP+Wawrl5r7Lh3rNX5J27WVsuARh3mlXGdmZLcpohJWN6MRaMyXSQcC2+lo9VyrnZP2QXts4zmKDDraXQ==}
+  '@revolist/revogrid@4.31.5':
+    resolution: {integrity: sha512-tWgNJpYPDrk/1tBYW4xZfgRNiab6ttZBqXwkeTdNX0fksNXnVsEXBEWegUvfkQs77QDRKcg2z1dUEop4G/Cttg==}
 
   '@revolist/rv-pro-trial@4.0.9':
     resolution: {integrity: sha512-NC16Jm8LslC0rzXW0t3SFfO5m0aNhCB3rmNz7fAbFE3F3vCYfGNIVhfm2mg3DNOvnzmZqH+U8R+smgqp9XsytA==, tarball: https://trial.rv-grid.com/@revolist/rv-pro-trial/-/c2588c8b9c7200d00012e580ebdf1da8ca7a5abb}
@@ -594,9 +594,9 @@ snapshots:
     dependencies:
       playwright: 1.62.1
 
-  '@revolist/charts-trial@4.0.9(@revolist/revogrid@4.31.4)':
+  '@revolist/charts-trial@4.0.9(@revolist/revogrid@4.31.5)':
     dependencies:
-      '@revolist/revogrid': 4.31.4
+      '@revolist/revogrid': 4.31.5
       '@tanstack/query-core': 5.104.5
       d3-shape: 3.2.0
       fflate: 0.8.3
@@ -609,7 +609,7 @@ snapshots:
   '@revolist/gantt-trial@4.0.9':
     dependencies:
       '@fortawesome/fontawesome-free': 7.3.1
-      '@revolist/revogrid': 4.31.4
+      '@revolist/revogrid': 4.31.5
       '@revolist/revogrid-column-date': 2.0.27
       '@revolist/revogrid-column-select': 3.2.4
       '@revolist/rv-pro-trial': 4.0.9
@@ -618,8 +618,8 @@ snapshots:
   '@revolist/pivot-trial@4.0.9':
     dependencies:
       '@fortawesome/fontawesome-free': 7.3.1
-      '@revolist/charts-trial': 4.0.9(@revolist/revogrid@4.31.4)
-      '@revolist/revogrid': 4.31.4
+      '@revolist/charts-trial': 4.0.9(@revolist/revogrid@4.31.5)
+      '@revolist/revogrid': 4.31.5
       '@revolist/rv-pro-trial': 4.0.9
       '@tanstack/query-core': 5.104.5
       fflate: 0.8.3
@@ -637,12 +637,12 @@ snapshots:
       '@revolist/revo-dropdown': 3.0.12
       '@stencil/core': 4.43.5
 
-  '@revolist/revogrid@4.31.4': {}
+  '@revolist/revogrid@4.31.5': {}
 
   '@revolist/rv-pro-trial@4.0.9':
     dependencies:
       '@formulajs/formulajs': 4.6.1
-      '@revolist/revogrid': 4.31.4
+      '@revolist/revogrid': 4.31.5
       '@tanstack/query-core': 5.104.5
       preact: 10.29.1
       write-excel-file: 4.1.1
@@ -650,7 +650,7 @@ snapshots:
   '@revolist/scheduler-trial@4.0.9':
     dependencies:
       '@fortawesome/fontawesome-free': 7.3.1
-      '@revolist/revogrid': 4.31.4
+      '@revolist/revogrid': 4.31.5
       '@revolist/rv-pro-trial': 4.0.9
       '@tanstack/query-core': 5.104.5
       pdfmake: 0.3.9
