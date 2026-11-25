@@ -1,10 +1,10 @@
 
 overrides:
-  '@revolist/revogrid': '4.31.5'
+  '@revolist/revogrid': '4.32.0'
 
 minimumReleaseAgeExclude:
-  - '@revolist/gantt-trial@4.0.25'
-  - '@revolist/pivot-trial@4.0.25'
-  - '@revolist/rv-pro-trial@4.0.25'
-  - '@revolist/scheduler-trial@4.0.25'
-  - '@revolist/ui@4.0.25'
+  - '@revolist/gantt-trial@4.2.2'
+  - '@revolist/pivot-trial@4.2.2'
+  - '@revolist/rv-pro-trial@4.2.2'
+  - '@revolist/scheduler-trial@4.2.2'
+  - '@revolist/ui@4.2.2'

@@ -105,7 +105,7 @@ test.describe('RevoGrid Pro trial examples', () => {
     await expect(page.getByRole('heading', { name: 'Event scheduler' })).toHaveCount(0);
     await expect(page.getByText('Week view', { exact: true })).toHaveCount(0);
     await expect(page.locator('revo-grid')).toBeVisible();
-    const dayHeaders = page.getByRole('columnheader');
+    const dayHeaders = page.getByRole('columnheader', { name: /^(Sun|Mon|Tue|Wed|Thu|Fri|Sat)\s*\d/i });
     await expect(dayHeaders).toHaveCount(7);
     await expect(dayHeaders.nth(0)).toContainText(/Sun.*7/i);
     await expect(dayHeaders.nth(1)).toContainText(/Mon.*8/i);
